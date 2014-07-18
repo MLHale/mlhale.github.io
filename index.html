@@ -1,7 +1,76 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<!-- saved from url=(0039)http://getbootstrap.com/examples/cover/ -->
+<html lang="en" data-ember-extension="1">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./lib/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./lib/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style id="holderjs-style" type="text/css"></style>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap.min.js"></script>
+    <script src="./lib/docs.min.js"></script>
+    <script src="./lib/handlebars-1.0.0.js"></script>
+    <script src="./lib/ember.js"></script>
+  </head>
+
+  <body data-ember-extension="1">
+    <script type="text/x-handlebars" data-template-name="home">
+      <div class="page-header">
+        <h1>Wildstar Mitigation Calculator</h1>
+      </div>
+      <div class="container-fluid">
+        
+        <div class="row-fluid">
+          <form class="form" role="form">
+            <div class="form-group col-md-6">
+              <label for="armor">Armor</label>
+              {{view Ember.TextField class="form-control" valueBinding="armor" type="number"}}
+            </div>
+            <div class="form-group col-md-6">
+              <label for="armor">Physical Resist Rating</label>
+              {{view Ember.TextField class="form-control" valueBinding="physicalResist" type="number"}}
+            </div>
+            <div class="form-group col-md-6">
+              <label for="armor">Tech Resist Rating</label>
+              {{view Ember.TextField class="form-control" valueBinding="techResist" type="number"}}
+            </div>
+            <div class="form-group col-md-6">
+              <label for="armor">Magic Resist Rating</label>
+              {{view Ember.TextField class="form-control" valueBinding="magicResist" type="number"}}
+            </div>
+          </form>
+          <br>
+            Phyiscal Mitigation: {{pResist}}%<br>
+            Tech Mitigation: {{tResist}}%<br>
+            Magic Mitigation: {{mResist}}%<br>
+        </div>
+      </div>
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+
 </html>
