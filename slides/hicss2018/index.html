@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>HICSS 2018: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-quicksand theme-color-black-mint">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="0733f2b9522892dcae6bd62cd0c92e5e" data-background-size="contain" data-background-position="50% 50%" data-background-image="hicss/a56ccaaebffbcf52552bab1bf3b5cf7b.jpg">
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 793px; height: 291px; left: 14px; top: 414px;" data-block-id="b20a4a8075d35951d3a8d9c52f6c9c57"><div class="sl-block-style" style="z-index: 10; opacity: 0.63;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 792 291"><rect width="792" height="291" class="shape-element" fill="#000000"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="text" style="width: 774px; left: 24px; top: 420px; height: auto;" data-block-id="3b490844c30f67a360d086508a0d3c97"><div class="sl-block-style" style="z-index: 11;"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 255, 255); border-width: 1px; text-align: left; line-height: 0.897; font-size: 90%;" dir="ui" data-has-line-height="">
+<h3><span style="font-size:0.7em">Multimodal Data Fusion and Behavioral Analysis Tooling for Exploring Trust, Trust-propensity, and Phishing Victimization in Online Environments</span></h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="width: 774px; left: 24px; top: 634px; height: auto;" data-block-id="62ec2c505235a384d66a624b768726cf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(255, 255, 255); line-height: 0.871; font-size: 70%;" data-has-line-height="" dir="ui">
+<p style="text-align:left"><span style="color:#FFA500">Matt Hale</span></p>
+
+<p style="text-align:left">Assistant Professor of Cybersecurity</p>
+
+<p style="text-align:left"><span style="color:#FFA500">N</span>ebraska <span style="color:#FFA500">U</span>niversity <span style="color:#FFA500">C</span>enter for <span style="color:#FFA500">I</span>nformation <span style="color:#FFA500">A</span>ssurance</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 216px; height: 65px; left: 582px; top: 634px;" data-block-id="9f97935f9ce3f16ac7e1fd981507de99"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="905" data-natural-height="272" data-lazy-loaded="" data-src="hicss/56802c70ce793a529742789af4a53c38.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 774px; left: 24px; top: 533px; height: auto;" data-block-id="7095afde33f55d97afa4d9540916407d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15; color: rgb(255, 255, 255); line-height: 0.871; font-size: 70%;" data-has-line-height="" dir="ui">
+<p style="text-align:left">Mickey Hefley, Gabi Wethor, Matthew L. Hale</p>
+
+<p style="text-align:left">HICSS-51 2018, Waikoloa, HI</p>
+
+<p style="text-align:left">Slides available at: <a href="http://slides.mlhale.com/hicss2018" target="_blank">slides.mlhale.com/hicss2018</a></p>
+</div></div></section><section data-id="5efb9c181963d443b315efbbac701429"><div class="sl-block" data-block-type="text" style="height: auto; width: 1239px; left: 40px; top: 5px;" data-block-id="a6dcd6eda0328b23d101e863f328a8fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2 style="text-align: left;"><span style="color:#FFA500">Today: Answering Four Questions</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 66px; top: 105px;" data-block-id="40fccfd2c1872d8985a0ade0197079bb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p>What's the state of phishing? (context)</p>
+
+<p>What are we doing about it? (contribution)</p>
+
+<p>Is it performant? (evaluation)</p>
+
+<p>Is it precise? (evaluation)</p>
+</div></div></section><section class="stack" data-id="e6260dba18e885db81d44f8d3f0ff060"><section data-id="201a5a3a351b9b051abbb0e95eef12b1"><div class="sl-block" data-block-type="text" style="height: auto; width: 586px; left: 0px; top: 275px;" data-block-id="23c8ae798c9b5f57201ac969cc702a4a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);">
+<h2><span style="color:#FFA500">Bonus Question:</span></h2>
+
+<h2><span style="color:#FFA500">Who is this guy?</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 533px; height: 533px; left: 599px; top: 82px;" data-block-id="723d5bf5ad7c9f7b533df93df8bce25f"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="960" data-natural-height="960" data-lazy-loaded="" data-src="hicss/2d2ac709f02dc72eb775ddda970a70ef.png"></div></div></section><section data-id="e60945534523b4387dc101b34eedef22"><div class="sl-block" data-block-type="text" style="height: auto; width: 635px; left: 70px; top: 200px;" data-block-id="5e2e9a794ad36e3af8bc36fb16b636c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right;">
+<h3><span style="color:#FFA500"><span style="text-align:left">Dog Father, Husband, Software Engineer, Researcher, Teacher, Web Developer, Board Gamer, Philosopher, Artist</span></span></h3>
+
+<p> </p>
+
+<p><span style="text-align:left">(roughly in that order)</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 443px; height: 332px; left: 730px; top: 72px;" data-block-id="feac6694c2f918fb321cfd8013a2bbf9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1440" data-natural-height="1080" data-lazy-loaded="" data-src="hicss/e9c8ba0a6285107d7de389e41af75acb.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 443px; height: 249px; left: 730px; top: 413px;" data-block-id="7280532a61aaaaadd16124c8398e9d26"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1920" data-natural-height="1080" data-lazy-loaded="" data-src="hicss/4c6e771e246c60fd06e22994869e9aee.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 50px; top: 643px;" data-block-id="8d06de7480fdd050f764eb4583c86cc5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: left;" dir="ui">
+<p><span style="font-size:1.0em"><span class="u-dir username">Tweet <a href="https://twitter.com/mlhale_" target="_blank">@<span class="u-linkComplex-target">mlhale_</span></a></span></span></p>
+</div></div></section><section data-id="fca77438a69ea12cde934d6ffb48e142"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 280px;" data-block-id="3766c677dd07de17a2476e15187f90b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Two Main Research Areas:</h3>
+
+<h3>
+<span style="color:#FFA500">Internet of Things Security</span> and <span style="color:#FFA500">Phishing Prevention</span>
+</h3>
+</div></div></section><section data-id="e7d209f1ea9c74b48139bafe8b6d757e"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 280px;" data-block-id="d56f3db2ec4903696f6373b9a8007ee3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Two Main Research Areas:</h3>
+
+<h3>
+<span style="color:#FFA500">Internet of Things Security</span> and <span style="color:#FFA500">Phishing Prevention</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 779px; top: 433px;" data-block-id="db00d1c487ef7dbbefa2d5f798e5afed"><div class="sl-block-content" data-line-x1="28" data-line-y1="92" data-line-x2="77" data-line-y2="-16" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 12;" data-line-width="17px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="49" height="108" viewbox="28 -16 49 108"><line stroke="#ff0000" stroke-width="17" x1="28.5" y1="92.5" x2="66.5" y2="7.5"></line><polygon fill="#ff0000" transform="translate(66,7) rotate(24.404)" points="0,-25.5 25.5,25.5 -25.5,25.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 434px; top: 551px;" data-block-id="0ab6bd7a02a705dff2acdd46069ce3b4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>Today's Focus</h3>
+</div></div></section></section><section class="stack" data-id="d4774340d65d7296299be932a0193416"><section data-id="e3da8318f894fafd96e7165c56a4c8ee"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 346px; top: 270px;" data-block-id="d9f686516d9e1d80f6f53037fe16b19b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:#FFA500">STOP. </span></h2>
+
+<h2>Look Around at Your Neighbors</h2>
+</div></div></section><section data-id="2fc78149af47b1fd51a5b499bbcfa825"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 28px; top: 70px;" data-block-id="da8d22553b7db6611ddaf25df3565573"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><font color="#ffa500">What IF I told you...</font></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 1086px; left: 114px; top: 381px;" data-block-id="b6fabc1ecaceed4d5065c323e8fdb023"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p>...the most sophisticated phishing websites would dupe about half (45%) of the people around you. Even average, less sophisticated, sites manage to convince more than 1 in 10 (13.7%).</p>
+</div></div></section><section data-id="44a8438c104b014204c1db1727e1051e"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 332px; top: 9px;" data-block-id="ff5498be09aa5fc63ea04f6185cce14e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>More <span style="color:#FFA500">Numbers</span>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1086px; left: 80px; top: 144px;" data-block-id="d209ec358b9310f6ee27965365fd8590"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<h1><span style="color:#FFA500">60 billion</span></h1>
+
+<h1><span style="color:#FFA500">6 billion</span></h1>
+
+<h1><span style="color:#FFA500">3 billion</span></h1>
+
+<h1><span style="color:#FFA500">28 million</span></h1>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 605px; top: 144px;" data-block-id="ae13f9c57cee1d58055910e996a8dff9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right;">
+<h1 style="color: rgb(255, 255, 255);">164 million</h1>
+
+<h1 style="color: rgb(255, 255, 255);">16.5 Million </h1>
+
+<h1 style="color: rgb(255, 255, 255);">8.2 Million</h1>
+
+<h1 style="color: rgb(255, 255, 255);">100,000</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 30px; top: 648px;" data-block-id="40c7b7b4fe45ca08c1d84d10ffbd0638"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 52%;">
+<pre>http://services.google.com/fh/files/blogs/google_hijacking_study_2014.pdf
+https://www.getcybersafe.gc.ca/cnt/rsrcs/nfgrphcs/nfgrphcs-2012-10-11-en.aspx
+</pre>
+</div></div></section><section data-id="d18b5883de7d9f47a84439823e5ea8de"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="29a1c679f34c36071841e2ca14804f20"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3><font color="#ffa500">The numbers are likely to Increase...</font></h3>
+</div></div></section><section data-id="da18a1ace9af81cab8e87e54dc62b1d6">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 3px; top: 612px; height: auto;" data-block-id="f13152debee7e8c26079847e8c2dc4ec"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Sources: 
+http://www.pewinternet.org/files/2013/05/PIP_TeensSocialMediaandPrivacy_PDF.pdf</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 421px; height: 533px; left: 39px; top: 84px;" data-block-id="d12820b77291d3a9d3591ebe9ab4ea7d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1034" data-natural-height="1308" data-lazy-loaded="" data-src="hicss/665e9b4bd4bb1e259d35272944dbf3ef.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 699px; left: 522px; top: 288px;" data-block-id="93e6e4c632e3f3a213bafa7a87a40834"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>
+<span style="color:#FFA500">Digital Citizenship</span> is an INcreasingly Salient Issue for our society</h3>
+</div></div></section><section data-id="08f308e3945aea49b78b07820d6d81eb">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 612px; height: auto;" data-block-id="d1ac26909976ac03f77785476c724985"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Sources: 
+http://www.pewinternet.org/files/2013/05/PIP_TeensSocialMediaandPrivacy_PDF.pdf</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 566px; height: 390px; left: 708px; top: 144px;" data-block-id="4ca196ab5c93064022f68b89b6c35986"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1422" data-natural-height="980" data-lazy-loaded="" data-src="hicss/95d399b1bc2f6ef1a31ff8041151b777.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 677px; height: 479px; left: 22px; top: 72px;" data-block-id="26692711504071410dc781d059ec8c9e"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1318" data-natural-height="932" data-lazy-loaded="" data-src="hicss/5c2a482fee720ee2148d1a0382dc0f4a.png"></div></div></section><section data-id="248754e54d97513f9f3d6b42e01106be"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 37px;" data-block-id="f76862888d8e9d2da3864483a0bda93a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:#FFA500">Easier than Ever</span> to Be an Attacker</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 499px; left: 43px; top: 228px;" data-block-id="c5f342ab4a3997bdde9be8717a507d27"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p>(<a href="https://pipl.com/" target="_blank">https://pipl.com/</a>) Easily find personal information</p>
+
+<p>(<a href="http://geosocialfootprint.com/" target="_blank">http://geosocialfootprint.com/</a>) See a history of where you've been</p>
+
+<p>(<a href="https://github.com/trustedsec/social-engineer-toolkit" target="_blank">https://github.com/trustedsec/social-engineer-toolkit</a>) Clone a legitmate site and install an information harvester in 2 steps</p>
+
+<p><span style="color:rgb(255, 255, 255)">(sites not listed) </span>Buy credit cards and SSNs for a few bucks </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 640px; height: 360px; left: 578px; top: 224px;" data-block-id="84934b9f6add91029555f7cb0ed4125d"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="640" data-natural-height="360" data-lazy-loaded="" data-src="hicss/d62c5dfe85f3f99bbe6402c0a392db68.png"></div></div></section><section data-id="9e583e61e8f7399a54d7b9ea467f3782"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="5f4f270ea8289381c63587a557178548"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">Enter the CyberTrust Platform</span></h2>
+</div></div></section><section data-id="60b40813f0fab2c7c60be0164ef771ab"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 203px;" data-block-id="78033acc73cd36c8452d1c8c2c12c21a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2><span style="font-size:0.9em"><span style="color:#FFA500">Cybertrust Project</span></span></h2>
+
+<p><span style="font-size:0.7em">(Preventing Phishing Victimization using Bio-behavioral Markers of Cyber Trust)</span></p>
+
+<p> </p>
+
+<p><span style="font-size:0.9em">Investigating what trust factors influence decision making with suspicious content</span></p>
+</div></div></section><section data-id="5092f02c6d7a46d56a0021f772fbb7dd"><div class="sl-block" data-block-type="text" style="height: auto; width: 542px; left: 689px; top: 136px;" data-block-id="935eedb97d0e8d16d619ad0f3a668e16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%; text-align: justify;">
+<pre style="text-align: justify;">Some of this material is based on research sponsored in part by the Air Force Office of Scientific Research (AFOSR), under award number FA9550-12-1-0457. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright notation thereon. The views expressed in this talk are those of the author and do not reflect the official policy or position of the Department of Defense or U.S. Government.</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 550px; height: 220px; left: 80px; top: 238px;" data-block-id="b544162df80dbc4ed01dcf77df0c4fa7"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="550" data-natural-height="220" data-lazy-loaded="" data-src="hicss/cb38bafd1f7ee7d180b0c95c59a79c93.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 758px; left: 253px; top: 659px;" data-block-id="5377be88094ec3b8e9246a81af83a7a7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>PRior Work Acknowledgement</h3>
+</div></div></section><section data-id="20f04e0922e0eea1352a38e4c125fd59"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="600539401f6e403c1e1cbece0e52ed5e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;" dir="ui">
+<p><span style="font-size:1.2em">Identify root causes of victimization</span></p>
+
+<p><span style="font-size:1.2em">Identify user awareness gaps</span></p>
+
+<p><span style="font-size:1.2em">Train participants to recognize suspicious content</span></p>
+
+<p><span style="font-size:1.2em">Prevent victimization</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 32px; top: 39px;" data-block-id="aace37074aa76f7173d37c7f35e854a7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="color:#FFA500">Basic Idea</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 52px; height: 52px; left: 294px; top: 301px;" data-block-id="832bd56ebd49a5813164d4ad5d5ce504"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(230, 145, 56)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(230, 145, 56)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 52px; height: 52px; left: 332px; top: 355px;" data-block-id="050206b083d23907f381429f7ccec999"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(230, 145, 56)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(230, 145, 56)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 1085px; top: 133px;" data-block-id="544573df3436405938bb84178d969454"><div class="sl-block-content" data-line-x1="200" data-line-y1="496" data-line-x2="200" data-line-y2="0" data-line-color="#e69138" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 15;" data-line-width="18px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="496" viewbox="200 0 1 496"><line stroke="#e69138" stroke-width="18" x1="200" y1="469" x2="200" y2="0"></line><polygon fill="#e69138" transform="translate(200,469) rotate(0)" points="0,27 27,-27 -27,-27"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 856px; top: 335px;" data-block-id="bbac7edbf8d2aaa7a15abb97f41b59d3"><div class="sl-block-style" style="z-index: 16; transform: rotate(270deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>Instrumentation and Tooling</p>
+</div></div></div></section><section data-id="639090de6ca97aa029e1a928bf51903c">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 20px; top: 10px;" data-block-id="c079fac2d3f4d5de8871c45865d9b816"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:#FFA500">The Platform</span></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 1075px; height: 588px; left: 183px; top: 84px;" data-block-id="33fcb0beae27ede6e324faa4b0d53cf1"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1090" data-natural-height="596" data-lazy-loaded="" data-src="hicss/63ccb2d98816c37a7909d746d42254bc.png"></div></div></section><section data-id="07dd4aca0c45dda701f9c4ccae2814b0">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 20px; top: 10px;" data-block-id="a91ed70ca33a827e13407705116d3bce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:#FFA500">The Platform</span></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 844px; height: 629px; left: 408px; top: 91px;" data-block-id="407036df12fe6dff9503cd82427d0444"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="635" data-natural-height="473" data-lazy-loaded="" data-src="hicss/d3c00b4f7dc3942bf01ed968c5df4213.png"></div></div></section><section data-id="524f00ea07696e57a84efe25ed434f10">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 20px; top: 10px;" data-block-id="3a937bc3a8816ab1cfba201e245bcf70"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:#FFA500">The Platform</span></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 833px; height: 578px; left: 224px; top: 106px;" data-block-id="626959ebcbcd08b5d623139e8120afa5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1093" data-natural-height="758" data-lazy-loaded="" data-src="hicss/7fe8178032baae9c71030b6051a5facb.png"></div></div></section><section data-id="723eba12eafd65c715ea2e2b79a1fcd3">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1097px; left: 103px; top: 12px;" data-block-id="aab89a2fcf32f780cc32f3af38563074"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<h2>
+<span style="font-size:0.7em"><span style="color:#FFA500">Previous Results: </span><span style="color:rgb(255, 255, 255); text-align:left"> </span></span><br>
+<span style="font-size:0.7em"><span style="color:rgb(255, 255, 255); text-align:left">predictor vs actual victimization</span></span>
+</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 1075px; height: 384px; left: 103px; top: 169px;" data-block-id="5f70de8ef8ebbaa709b8af701bef4cd8"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1401" data-natural-height="500" data-lazy-loaded="" data-src="hicss/c186bdb0a5e5f9dffe67c9c484bd4c51.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 112px; top: 557px;" data-block-id="27e101b8ae3fe05dbaa09b0a6939a16b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">R=0.523, df=61, p=0.01</p>
+</div></div>
+</section></section><section class="stack" data-id="ef1ed7056646773b02796f3b67822739"><section data-id="521d58bdf7122d83e07c63c1bfe8ef9b"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="0b7e7ac261afa234eca95ca0d63025a2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2>Ok, But Why am I here today?</h2>
+</div></div></section><section data-id="04c78a8cd1714b34dfb56a960ba5fe47"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="37528ac877613690b236e0daafad8f83"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;" dir="ui">
+<p><span style="font-size:1.2em">Identify root causes of victimization</span></p>
+
+<p><span style="font-size:1.2em">Identify user awareness gaps</span></p>
+
+<p><span style="font-size:1.2em">Train participants to recognize suspicious content</span></p>
+
+<p><span style="font-size:1.2em">Prevent victimization</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 32px; top: 39px;" data-block-id="f10ef63018ec3cdfcba03a8799b0ee74"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="color:#FFA500">Basic Idea</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 52px; height: 52px; left: 294px; top: 301px;" data-block-id="36e8e536145fefb3551f3c6ec440d0a2"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(230, 145, 56)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(230, 145, 56)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 52px; height: 52px; left: 332px; top: 355px;" data-block-id="5bb4db1b6ecf79c3ce7d68e7ee05a2d1"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(230, 145, 56)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(230, 145, 56)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 1085px; top: 133px;" data-block-id="0123e6a53f1c7e39f2df05c714e4dfd0"><div class="sl-block-content" data-line-x1="200" data-line-y1="496" data-line-x2="200" data-line-y2="0" data-line-color="#e69138" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 15;" data-line-width="18px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="496" viewbox="200 0 1 496"><line stroke="#e69138" stroke-width="18" x1="200" y1="469" x2="200" y2="0"></line><polygon fill="#e69138" transform="translate(200,469) rotate(0)" points="0,27 27,-27 -27,-27"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 856px; top: 335px;" data-block-id="066dd18b251499c4ae738cead198c9ff"><div class="sl-block-style" style="z-index: 16; transform: rotate(270deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>Instrumentation and Tooling</p>
+</div></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 247px; height: 588px; left: 1014px; top: 103px;" data-block-id="9a4665b18a6c05f99c483d48277f67fd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 17;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="10"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 247 588"><defs><clippath id="shape-mask-1-1515174772903"><rect width="247" height="588"></rect></clippath></defs><rect width="247" height="588" clip-path="url(#shape-mask-1-1515174772903)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="20"></rect></svg></div></div></section><section data-id="9bd28536aaa831b5003929d8d6090386"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 216px;" data-block-id="8ebb0b6aa614f8f40e8025ee72c263ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h2><span style="font-size:0.7em">MULTIMODAL DATA FUSION AND BEHAVIORAL ANALYSIS TOOLING FOR EXPLORING TRUST, TRUST-PROPENSITY, AND PHISHING VICTIMIZATION IN ONLINE ENVIRONMENTS</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 161px;" data-block-id="c317c251acf448084c410ede981434ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 153, 0);">
+<p>HICSS 2018 Paper Contribution</p>
+</div></div></section><section data-id="89770814c1a6381a43d11f753460ba51"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="eb1bd3d8e2779444f968bfbb7fa4116c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>So...That title is a mouthful</h2></div></div></section><section data-id="d98230df982917c1ff0dd213ba65db12"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 216px;" data-block-id="6b68367ad0d7fdc69ce18683e1bef9d1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h2><span style="font-size:0.7em"><span style="color:#FFA500">MULTIMODAL</span> DATA FUSION AND BEHAVIORAL ANALYSIS TOOLING FOR EXPLORING TRUST, TRUST-PROPENSITY, AND PHISHING VICTIMIZATION IN ONLINE ENVIRONMENTS</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 801px; left: 27px; top: 23px;" data-block-id="67a251b322f64389cdb65d8287fa400f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<h1 style="text-align: left;"><span style="color:#FFA500"><span style="font-size:0.7em">Breaking it down</span></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 795px; left: 212px; top: 562px;" data-block-id="08a5ebc5fe606c110ea7d514c62099f5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Multiple types of data: Eye tracker, mouse movement, keypresses, and application data (macro level behaviors)</p>
+</div></div></section><section data-id="d421d98f8283cd71c7b115ebbc7f8801"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 216px;" data-block-id="6a29e8a80c4357434d19cb35091bd2f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2><span style="font-size:0.7em">MULTIMODAL <span style="color:#FFA500">DATA FUSION </span>AND BEHAVIORAL ANALYSIS TOOLING FOR EXPLORING TRUST, TRUST-PROPENSITY, AND PHISHING VICTIMIZATION IN ONLINE ENVIRONMENTS</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 801px; left: 27px; top: 23px;" data-block-id="eef754fa024c223e0a2a73ef1521921d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h1 style="text-align: left;"><span style="color:#FFA500"><span style="font-size:0.7em">Breaking it down</span></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 795px; left: 213px; top: 563px;" data-block-id="c9682054bb75aaef4121ab6f2778f9ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Stitching the various data together to present a picture that is more than the sum of its parts</p>
+</div></div></section><section data-id="2aec18a5517f5c0c92565826f384e938"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 216px;" data-block-id="fb96ce1c367d13324d13042ca0e77212"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2><span style="font-size:0.7em">MULTIMODAL DATA FUSION<span style="color:#FFA500"> </span>AND <span style="color:#FFA500">BEHAVIORAL ANALYSIS TOOLING</span> FOR EXPLORING TRUST, TRUST-PROPENSITY, AND PHISHING VICTIMIZATION IN ONLINE ENVIRONMENTS</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 801px; left: 27px; top: 23px;" data-block-id="124da889d875d6b10c7d15d76d5af5d9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h1 style="text-align: left;"><span style="color:#FFA500"><span style="font-size:0.7em">Breaking it down</span></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 795px; left: 243px; top: 559px;" data-block-id="5380d613f70414ea4e8c75ab0c124e00"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The data alone is not enough, we want to understand how users behave and how behaviors lead to the creation of capturable data artifacts</p>
+</div></div></section><section data-id="132411ad74102fe19f22a14989277123"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 216px;" data-block-id="60a03f23251f2a959f126f4cd65448e0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2><span style="font-size:0.7em">MULTIMODAL DATA FUSION<span style="color:#FFA500"> </span>AND BEHAVIORAL ANALYSIS TOOLING FOR <span style="color:#FFA500">EXPLORING TRUST, TRUST-PROPENSITY, AND PHISHING VICTIMIZATION IN ONLINE ENVIRONMENTS</span></span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 801px; left: 27px; top: 23px;" data-block-id="26d255cc175a969940aa75f6f82f3891"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h1 style="text-align: left;"><span style="color:#FFA500"><span style="font-size:0.7em">Breaking it down</span></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1043px; left: 143px; top: 559px;" data-block-id="44133d3d1438977623f5b9905caff0c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>The point. We envision a tool that can help researchers better understand  behaviors that lead to phishing victimization - so they can develop better training tools to prevent them.</p>
+</div></div></section></section><section class="stack" data-id="0883bf9ee661c741cde706816a238b2c"><section data-id="33988b5e8c5aab5be5bcd2aa5919fc8a"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="e683018985a4bab7a42fa3311f709fb5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">More than a Title: </span></h2>
+
+<h3>Our Contribution</h3>
+</div></div></section><section data-id="71d18ee5332ceb516c857cf53f8a7c5f"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 0px;" data-block-id="f0458aa8761b9f876a229597215a5f9b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2>New Tooling for Behavioral Analysis</h2>
+
+<h3><span style="color:#FFA500">(Software Architecture)</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 896px; height: 532px; left: 192px; top: 166px;" data-block-id="15a905a4640bd5a47bdf3d88bca0fb21"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1378" data-natural-height="818" data-lazy-loaded="" data-src="hicss/b3af2b9cf76946492f843f437556006a.png"></div></div></section><section data-id="53eb29dbe142bf8be47b111f80012ea0"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 0px;" data-block-id="9b7c115955a5afe30933634728f88f35"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2>New Tooling for Behavioral Analysis</h2>
+
+<h3><span style="color:#FFA500">(Software Architecture)</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 896px; height: 532px; left: 192px; top: 166px;" data-block-id="9535295a253400b04fbe488a36f49c2a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1378" data-natural-height="818" data-lazy-loaded="" data-src="hicss/b3af2b9cf76946492f843f437556006a.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 133px; height: 516px; left: 311px; top: 132px;" data-block-id="5d320239d1b0b665cd8c538cb6e56362"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 133 516"><defs><clippath id="shape-mask-2-1515174809883"><rect width="133" height="516"></rect></clippath></defs><rect width="133" height="516" clip-path="url(#shape-mask-2-1515174809883)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="16"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 315px; height: 99px; left: 443px; top: 527px;" data-block-id="fa7ac3ce5c51dcd2f3176c3c3dbddacb"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 316 100"><defs><clippath id="shape-mask-3-1515174809887"><rect width="316" height="100"></rect></clippath></defs><rect width="316" height="100" clip-path="url(#shape-mask-3-1515174809887)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="16"></rect></svg></div></div></section><section data-id="b248a1c9f0af518c6e336137ce6a9375"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 0px;" data-block-id="ade47bc052640af1bf33422b35eb5115"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2>New Tooling for Behavioral Analysis</h2>
+
+<h3><span style="color:#FFA500">(Software Architecture)</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 851px; height: 574px; left: 215px; top: 131px;" data-block-id="abfc7acea133d008c45d9159e8c3ce27"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1635" data-natural-height="1103" data-lazy-loaded="" data-src="hicss/4e22d431f9a0410d0d8119f1b43e8549.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 425px; height: 420px; left: 207px; top: 287px;" data-block-id="7389e58108172e1b62f5f4659e97fe84"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 425 420"><defs><clippath id="shape-mask-4-1515174820856"><rect width="425" height="420"></rect></clippath></defs><rect width="425" height="420" clip-path="url(#shape-mask-4-1515174820856)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="16"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 261px; height: 146px; left: 800px; top: 300px;" data-block-id="4b821ac488c824452b116e4c27818702"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 261 147"><defs><clippath id="shape-mask-5-1515174820860"><rect width="261" height="147"></rect></clippath></defs><rect width="261" height="147" clip-path="url(#shape-mask-5-1515174820860)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="16"></rect></svg></div></div></section><section data-id="9a6f554ece63e8179eaf5f424f5f23df"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="0408067edcd6671e68b650aab9e83544"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Our Approach</h3>
+
+<h3>Works with the Gazepoint GP3 Eye Tracker</h3>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 800px; height: 451px; left: 241px; top: 136px;" data-block-id="573d8f156af06dfa045f8e7c1068597d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="800" data-natural-height="451" data-lazy-loaded="" data-src="hicss/1593d68c90b77d5225cfd4d20d05f2b1.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 629px;" data-block-id="2d2037a00b9b589ce3c330e5142377c3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Photo credit GP3 Marketing materials (gazept.com)</p>
+</div></div></section><section data-id="8ef7f3e6e16ce2d69d35e10e994d2b65"><div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 560px; top: 266px;" data-block-id="5d0d03ace84a2eb21d0f8226bceeee13"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2>Quick Tangent</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 433px; height: 433px; left: 104px; top: 124px;" data-block-id="0c0df861bd58ba800973fa6154b327e9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="225" data-natural-height="225" data-lazy-loaded="" data-src="hicss/b8bcd91c236d8c21011ca2e0aa317b23.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 920px; top: 449px;" data-block-id="0299aff77e6600a5379c1704d57cd1ed"><div class="sl-block-content" data-line-x1="200" data-line-y1="276" data-line-x2="200" data-line-y2="149" data-line-color="#e69138" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 13;" data-line-width="15px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="127" viewbox="200 149 1 127"><line stroke="#e69138" stroke-width="15" x1="200.5" y1="254.5" x2="200.5" y2="149.5"></line><polygon fill="#e69138" transform="translate(200,254) rotate(0)" points="0,22.5 22.5,-22.5 -22.5,-22.5"></polygon></svg></div></div></section><section data-id="96bc05b1b78c65691f070840dab024fe"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="33261f4688b9b24647baa63f2dee190d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: right; z-index: 10; padding: 40px;">
+<h2>
+<span style="color:#FFA500">More than Just </span>CONVENIENT</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 37px; top: 153px;" data-block-id="3bc02fb96c02d972a8ccf7049ce526be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li style="text-align:left">Docker makes our data capture techniques more modular and thus more scalable.</li>
+	<li style="text-align:left">It allows us to package everything required easing addoption and modularization in the open source community</li>
+</ul>
+</div></div></section><section data-id="8be5de4ac0761e47fdf9850fefa9b193"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 112px;" data-block-id="7a1d7476dd7e00776880d9e907256504"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Speaking of <span style="color:#FFA500">Open Source...</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 640px; height: 405px; left: 578px; top: 216px;" data-block-id="0818ccbf1f3ef4e7e9b6acd476aaeea9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1612" data-natural-height="1020" data-lazy-loaded="" data-src="hicss/ef3a5f2375f3206eb5add5b0cd37e652.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 67px; top: 351px;" data-block-id="12e533c29c8587f529811450a1cadf41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://github.com/MLHale/gazepoint-websockets" target="_blank">https://github.com/MLHale/gazepoint-websockets</a></p>
+
+<p> </p>
+
+<p><a href="https://github.com/MLHale/ember-heatmap" target="_blank">https://github.com/MLHale/ember-heatmap</a></p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 12px; top: 12px;" data-block-id="0abbe9488ddabafe539841f757218e1f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>#End of Docker Tangent</p>
+</div></div></section></section><section class="stack" data-id="8c1aef5ba7cd375a68dd02dda6df4bff"><section data-id="3b983c15952bd092c8447805e6b46739"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="ea9a41b4e7e7433ab863d975aa08f19f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>What Data is collected?</h3>
+
+<p>(Mouse data/Key data)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 1228px; left: 0px; top: 112px;" data-block-id="8979b3faf4d018ec30c5c3ff64401a1d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Mouse Movement</em>: </span>On a user mouse movement event, capture {<em>x, y, w, h, t</em>}, where <em>x</em> and <em>y</em> identify the pixel coordinates of the mouse, in two-dimensional screen space, <em>x</em> ≤ <em>w</em> and <em>y </em>≤ <em>h</em>), <em>w</em> and <em>h</em> define the maximum screen size (in pixels), and <em>t</em> is the time when the mouse event occurred. uses the W3C standard <em>high resolution time</em> <em>level 2</em> specification with worst-case resolvable timing skew of 5ms. Other mouse and keyboard events also use high res. timing.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Mouse Selection</em>:</span> On a user mouse up event, capture {<em>ht, t</em>} where <em>ht</em> is highlighted text and <em>t</em> is the high-resolution timestamp when the event occurred. If no text is highlighted this event is ignored.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Mouse Clicks</em>: </span>On user mouse down capture {<em>x, y, w, h, t</em>}. Similarly, to mouse movement, <em>x</em> and <em>y</em> define pixel positions in screen coordinate space, <em>w</em> and <em>h</em> define the max screen width and height, and <em>t </em>is the timestamp when the click event occurred.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Key Press</em></span>: On a user key down event, capture {<em>k, t</em>}, where <em>k</em> is the Unicode character identifying the key pressed (as translated from its browser-specific <em>keycode</em>) and <em>t</em> is the time the event occurred</span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="448d6e623d224ebc1a5dc511eaa66219"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="7ef3142ab63199f387c46a99df02fa4f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>What Data is collected?</h3>
+
+<p>(eye movement data)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1228px; left: 0px; top: 112px;" data-block-id="2cdcf24cd4685eb9118fc8ed4f9e6f54"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Eye Movement</em> </span>events are logged following the schema: {<em>tid</em>,<em> cnt, et, t-tick, msg, cx, cy, fpogid, fpogd, fpogs, fpogv, fpogx, fpogy, bpogx, bpogy, bpogx, lpogx, lpogy, lpogv, rpogx, rpogy, rpogv leyex, leyey, leyez, lpupild, lpupilv, reyex, reyey, reyez, rpupild, rpupilv, lpcx, lpcy, lpd, lps, lpv, rpcx, rpcy, rpd, rps, rpv} </em></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 805px; height: 378px; left: 229px; top: 288px;" data-block-id="20758293da2fd674d97a72c05a29208f"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2500" data-natural-height="1174" data-src="hicss/5255a55afbd8f349413e7d987bfc0cf3.png"></div></div></section><section data-id="7e9110b9cf6df3aa8e7d2e6fa0ffb7bf"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="b862b7bda8f8c41fdf73bafba5dacda0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>What Data is collected?</h3>
+
+<p>(macro "application level" behavioral data)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1228px; left: 0px; top: 112px;" data-block-id="964f57da8316713a24a0be68f3506952"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Session Timing</em></span>: {<em>sts</em>, <em>ste</em>}, where <em>sts</em> and <em>ste</em> are high-resolution timestamps identifying the start and end times of the user’s session.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Time tracking (task)</em></span>:  {<em>tts, tte, tid</em>}, where <em>tts </em>and <em>tte</em> are the start and end times that identify how long the user views content associated with the <em>task</em>, with id <em>tid</em>.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Likert scale</em></span>: rates the trustworthiness of content as <em>very trustworthy</em>, <em>trustworthy</em>, <em>unsure</em>, <em>untrustworthy</em>, or <em>very untrustworthy</em>.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>trust decision</em></span>:  {<em>tid, lrt, tr</em>}, where <em>tid</em> is the task id, <em>lrt</em> is trustworthiness captured by the Likert scale and <em>tr</em> is a Boolean indicating <em>trust</em> (true) or <em>do not trust</em> (false).</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span style="color:#FFA500"><em>Idle time</em></span>: When a user goes into an idle state, capture {<em>it, et</em>}. Where <em>it </em>and <em>et</em> are high resolution timestamps identifying the start and end times of user idling. </span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="b8694d7a00e381df90aa8881f886d355"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="744b6fb37c9139d856845fd731e9e6ed"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Data Fusion</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 764px; height: 556px; left: 240px; top: 92px;" data-block-id="ad507233b5f9dda2b1ec601c641dbd80"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1780" data-natural-height="1296" data-lazy-loaded="" data-src="hicss/c8f87e5f24cb0648479e2deba1339cc8.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 331px; top: 670px;" data-block-id="0ee51775998712a199f520a656d5a235"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Happens via web sockets and rest API calls</p>
+</div></div></section><section data-id="76708b042179b3893b5cb93024412948"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="417763c1257eb2fefa7dfb42f06319e0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Towards Behavioral Analysis Tooling</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 568px; height: 551px; left: 96px; top: 97px;" data-block-id="177db60740027e6eb5c00a850ca75d65"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="729" data-natural-height="707" data-lazy-loaded="" data-src="hicss/0db3689e0b32bb84a13a2e84752f23cf.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 664px; top: 316px;" data-block-id="a9d2c6a54665584e9a679bb6fb7df3a6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Heatmap and event tracing component output allows researchers to reconstruct subject sessions.</p>
+
+<p>(black line = mousing events)</p>
+</div></div></section><section data-id="4b80726a243ee9e6ff12f2c45c566634"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 8px;" data-block-id="3273b1a4b569ac75e9026531640f4a9b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Towards Behavioral Analysis Tooling</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 664px; top: 188px;" data-block-id="9c9f4841b5d0096259ae433284f076b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Can also be viewed as a time series</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 516px; height: 302px; left: 720px; top: 336px;" data-block-id="a805c650f91ce2ebbe82a35a59810d8b"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="634" data-natural-height="371" data-lazy-loaded="" data-src="hicss/a276d8eb0fe3f9d4e4c284b914b75663.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 687px; height: 547px; left: 13px; top: 85px;" data-block-id="6e38dd8c021a55c7e1fc8589785a0340"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="558" data-natural-height="444" data-lazy-loaded="" data-src="hicss/307d3b82146bae55c8d14d24229bf6e0.png"></div></div></section></section><section class="stack" data-id="f26758f51b235e56b5f970062c4d5b85"><section data-id="a85c187e869a6cd592482e66071529ff"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 144px;" data-block-id="6c83d5eb2a50af7631dd40c2d6850d33"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><font color="#ffa500">Ok, but is it performant?</font></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 453px; height: 239px; left: 400px; top: 270px;" data-block-id="7db940bc2bda67aee9cc1173821ba9f8"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="453" data-natural-height="239" data-lazy-loaded="" data-src="hicss/32a9bd529a0f91f6b63603f8e90d4e06.png"></div></div></section><section data-id="a2c88f9c99fca02ade6b24a8bcad5a8d"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="8d60ddfa1d4fe895c687462ffe0088f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Short Answer: Yes</h3>
+</div></div></section><section data-id="136c86cef7e0031940556eca91f5b761"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="5df333425c5a8689e7893a11633387f0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 1201px; left: 40px; top: 221px;" data-block-id="6273df19efc47bc31b3b9f11b97e6b9c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li>
+<span style="color:#FFA500"><em>Criteria 1</em></span>: The end-user test subject should not observe any performance hits during data collection and logging and they should be able to complete tasks (e.g. view and rate online content) unimpeded.</li>
+	<li>
+<em><span style="color:#FFA500">Criteria 2</span>: </em>All captured data points collected during a subject’s session should be sent to, parsed, and stored by the backend data API server without loss.</li>
+</ul>
+</div></div></section><section data-id="c6e5d2c47b66de8ccbeecb993f438b8a"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="7e569786c162a666ebe1272a46b81dbe"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1201px; left: 40px; top: 221px;" data-block-id="4b7943dc4cd78554b0784791b93e08b7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>
+<span style="color:#FFA500"><em>Criteria 1</em></span>: The end-user test subject should not observe any performance hits during data collection and logging and they should be able to complete tasks (e.g. view and rate online content) unimpeded.</li>
+	<li>Tested as client response rate (ms)</li>
+	<li>Ran 30 data capture sessions as users interacted with content in Cybertrust</li>
+</ul>
+
+<p> </p>
+
+<h3>
+<span style="color:#FFA500">Average Delay time Resulting from Data Capture:</span> 68ms</h3>
+</div></div></section><section data-id="512492da80079f882751e5dd0b0acfc8"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="c02013f256e5ea50bb5041f637ef30d0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1201px; left: 37px; top: 166px;" data-block-id="610e28704f53f38d3862d0dbbfdb3a5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<h3>This Meets Criteria 1. It is well below the average human response time.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 1076px; height: 391px; left: 80px; top: 322px;" data-block-id="10147e19df47b259d7fa0321be26ba2f"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1642" data-natural-height="596" data-lazy-loaded="" data-src="hicss/7bedb8bf8fe288ff717374389a024f1a.png"></div></div></section><section data-id="cfd1343f87391076ed826bf92c41a6e6"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="d27c29ca98414acaaa841273be0d3c36"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1201px; left: 40px; top: 221px;" data-block-id="b708a4ceac4442fa7a7e1cfe14731a3b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li>
+<em><span style="color:#FFA500">Criteria 2</span>: </em>All captured data points collected during a subject’s session should be sent to, parsed, and stored by the backend data API server without loss.</li>
+</ul>
+</div></div></section><section data-id="724d6ea9b36fe0b68e20efac08e5d38e"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="b4c3934a1a4dfaaf2ea1c475e87aea9f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 689px; height: 720px; left: 518px; top: 0px;" data-block-id="db071b6f6ea79203d2db406be68454f9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="635" data-natural-height="664" data-lazy-loaded="" data-src="hicss/a774b08d28e9eef24b2b1720d4c96826.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 511px; left: 0px; top: 341px;" data-block-id="ef4c880c01156461b8e108c31b442a7a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>1 of the 30 client performance captures. While fps is high (criteria 1), heap size is growing as the number of events are logged. Also there are many network requests that eventually stack up and queue)</p>
+
+<p>~4500 eye events and 2850 mouse events per 30 second task</p>
+</div></div></section><section data-id="cb2279b20da9aa977ccf8f4e3654b6d1"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="4f3adf9a2e9b4a1baaa24fd0892129cd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1201px; left: 40px; top: 221px;" data-block-id="edba1d2c5a1bdd5b1e060a063e7c4330"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>
+<em><span style="color:#FFA500">Criteria 2</span>: </em>All captured data points collected during a subject’s session should be sent to, parsed, and stored by the backend data API server without loss.</li>
+</ul>
+
+<p> </p>
+
+<p>This violated Criteria 2.</p>
+</div></div></section><section data-id="7bac750583f9e33858a655aeffb06e7e"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="e0a8500a19692aba310c161b49aff370"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1201px; left: 40px; top: 221px;" data-block-id="04f4fe1405f76239b29d20b6029ac346"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>
+<em><span style="color:#FFA500">Criteria 2</span>: </em>All captured data points collected during a subject’s session should be sent to, parsed, and stored by the backend data API server without loss.</li>
+</ul>
+
+<p> </p>
+
+<p>We fixed this problem by introducing a batch commit strategy - reducing the heap size and eliminating network queing by sending more events to the server at once.</p>
+</div></div></section><section data-id="aa2a2ef0707651f530f25debad9f6c3d"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="ed17cd19c44d491bc26becd6df466239"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2><font color="#ffa500">Long Answer</font></h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 395px; left: 824px; top: 185px;" data-block-id="524aea13090158847bb11c1d8cc5b49f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;">
+<p>Web-socket server performance during 1 of the 30 captures shown in C-Advisor</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 769px; height: 292px; left: 7px; top: 107px;" data-block-id="40da279a28e1c4ec9b6650053c11e706"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="770" data-natural-height="292" data-lazy-loaded="" data-src="hicss/bc86f8345ea232d27f4d0c2aa42c5953.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 758px; height: 327px; left: 518px; top: 393px;" data-block-id="8fbe34e245e22136d76d55bed95f59d4"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="844" data-natural-height="364" data-lazy-loaded="" data-src="hicss/405734f415b851676e863f35278abb21.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 496px; left: 7px; top: 425px;" data-block-id="6ec32e82c7c8f03dc8b1368c89ab7076"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Across the 30 tests, overall CPU utilization maxed out at 33% (at full simulated load) Ubuntu Server 16.04.2 on ESXi (pooled 4ghz CPU resources). Memory usage did not exceed 150MB and was, on average less than 100MB.</p>
+</div></div></section></section><section class="stack" data-id="73914bf3b08c47059d7516c075de11b4"><section data-id="fea5bb53077d6f0f3bf62857114c91ba"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="eddd500cd9438a4bef0d2b5f92786cda"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3><font color="#ffa500">Is it Precise?</font></h3>
+</div></div></section><section data-id="ddd2b933717d3dcbddd81db99580a5d4"><div class="sl-block" data-block-type="text" style="height: auto; width: 638px; left: 305px; top: 47px;" data-block-id="2b46241679b062e676b186e64ab13979">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+        <h2>Precision 
+            <span style="color:#FFA500">Numbers</span>
+        </h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 191px;" data-block-id="a15e94eadce9e454556f3ae48d78f78a">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;" dir="ui">
+<h3><span style="color:#FFA500"><span style="font-size:1.0em">Mouse and Keyboard</span></span></h3>
+
+<h3><span style="color:#FFA500"><span style="font-size:1.0em">Eye Tracker </span></span></h3>
+
+<h3><span style="color:#FFA500"><span style="font-size:1.0em">Macro "Application Level" </span></span></h3>
+
+<p> </p>
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 538px; top: 191px;" data-block-id="24d0b0a133acb45fd16cc0702f9888fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right;">
+<pre style="color:rgb(255, 255, 255); text-align:right"><span style="font-size:1.4em">800µs</span>
+</pre>
+
+<pre style="color:rgb(255, 255, 255); text-align:right"><span style="font-size:1.4em">333ns</span></pre>
+
+<pre style="color:rgb(255, 255, 255); text-align:right"><span style="font-size:1.4em">5µs - 100ms
+(by type)</span></pre>
+</div></div></section></section><section data-id="c450ccd7e173e87065c2bc95d22d31cb"><div class="sl-block" data-block-type="text" style="width: 551px; left: 691px; top: 23px; height: auto;" data-block-id="4620e42faa61f46bcba6af70ae99d103"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2 style="text-align: right;"><span style="color:#FFA500">Questions?</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 627px; left: 0px; top: 656px; height: auto;" data-block-id="38d6bce7c7d5bdcb4f5f66754eb1ea62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; color: rgb(230, 145, 56); line-height: 0.78;" data-has-line-height="">
+<p>©2018 Matthew L. Hale or as listed</p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 613px; height: 574px; left: 627px; top: 120px;" data-block-id="b27c07b5ac48b9755c64cb102f061287"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="347" data-natural-height="325" data-lazy-loaded="" data-src="hicss/0d587e2647724e0e919407ad36057a65.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 120px; height: 109px; left: 23px; top: 23px;" data-block-id="4f5dab07945e36221926775e8116fe52"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="96" data-natural-height="87" data-lazy-loaded="" data-src="hicss/07138034456d883deee1425dfb431666.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 551px; left: 48px; top: 289px; height: auto;" data-block-id="303d7ff86d63f6bf0e7f9b3da5b50a3e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: left;">
+<h3 style="text-align:right"><strong><span style="color:#FFA500">Matt Hale, PHD</span></strong></h3>
+
+<p style="text-align:right"><span style="color:#FFA500">U</span>niversity of <span style="color:#FFA500">N</span>ebraska at <span style="color:#FFA500">O</span>maha</p>
+
+<p style="text-align:right">Assistant Professor, Cybersecurity</p>
+
+<p style="text-align:right">mlhale@unomaha.edu</p>
+
+<p style="text-align:right">twitter: <span style="color:#FFA500">@mlhale_</span></p>
+</div></div>
+</section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1147835,"slug":"hicss","title":"HICSS 2018","description":"HICSS 2018 Slidedeck","width":1280,"height":720,"visibility":"all","published_at":"2018-01-05T06:46:36.286Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/51d10357a66e7d20dad96aedd57735d2/thumb.jpg?1515135003","view_count":2,"user":{"id":747632,"username":"matthale","name":"Matt Hale","description":null,"thumbnail_url":"https://lh6.googleusercontent.com/-KSSzYPPGAnk/AAAAAAAAAAI/AAAAAAAAAEI/P7Tqr95ZJSs/photo.jpg?sz=50","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":597999,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"none","transition":"slide","theme_id":null,"theme_font":"quicksand","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":63,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1515175191346,"font_typekit":null,"font_google":null,"notes":{"e3b474a9a29a371c440fcb3260712e4a":"Convert to proper reveal.js slide at somepoint","448d6e623d224ebc1a5dc511eaa66219":"where tid is the application-level task that the user is currently interacting with (if any);\n\ncnt is internal record counter (record id) used by the Gazepoint GP3;\n\net is the system Datetime stamp corresponding to the current system time;\n\nt-tick is a signed 64-bit integer which identifies the number of CPU time ticks involved in the event and is used by windows’ Query Performance Counter (QPC) for high-resolution timing based on CPU time stamp counters (TSC); and\n\nmsg is an optional field that can be used to ‘tag’ an event with textual data (such as debug information). Other values include cx and cy which identify mouse x, y positions (in screen coordinate space) detected by the GP3.\n\nThe fields fpogid, fpogd, fpogs, fpogv, fpogx, and fpogy, are parameters related to the fixation point of gaze which identifies the id of the fixation point, the starting timestamp (s) when it begins, the duration (d) it lasts, the x and y pixel positions in screen coordinate space where the user is fixating, and a Boolean validity value (v) indicating whether the fixation is valid. The fields bpogx, bpogy, bpogx, lpogx, lpogy, lpogv, rpogx, rpogy, and rpogv are for the best (b), right (r), and left (l) pupils."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "none",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
