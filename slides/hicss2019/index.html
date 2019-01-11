@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>HICSS 2019</title>
+
+		<meta name="description" content="HICSS Presentation 2019.">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-quicksand theme-color-black-mint">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="0733f2b9522892dcae6bd62cd0c92e5e" data-background-image="hicss2019/bc5e77b77596d915cd55587bb2091e80.jpg">
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 793px; height: 291px; left: 14px; top: 414px;" data-block-id="b20a4a8075d35951d3a8d9c52f6c9c57"><div class="sl-block-style" style="z-index: 11; opacity: 0.63;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 792 291"><rect width="792" height="291" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg></div></div></div>
+<div class="sl-block" data-block-type="text" style="width: 775px; left: 24px; top: 432px; height: auto;" data-block-id="3b490844c30f67a360d086508a0d3c97"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(255, 255, 255); border-width: 1px; text-align: left;" dir="ui">
+<h3 style="text-align:left">Detecting Dynamic Security Threats in Multi-Component<br>
+IoT SysteMs<br>
+ </h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="width: 774px; left: 24px; top: 635px; height: auto;" data-block-id="62ec2c505235a384d66a624b768726cf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; color: rgb(255, 255, 255); line-height: 0.871; font-size: 70%;" data-has-line-height="" dir="ui">
+<p style="text-align:left">Isaac Shrestha, <span style="color:#FFA500">Matthew Hale</span></p>
+
+<p style="text-align:left">Assistant Professor of Cybersecurity</p>
+
+<p style="text-align:left"><span style="color:#FFA500">N</span>ebraska <span style="color:#FFA500">U</span>niversity <span style="color:#FFA500">C</span>enter for <span style="color:#FFA500">I</span>nformation <span style="color:#FFA500">A</span>ssurance</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 216px; height: 65px; left: 582px; top: 635px;" data-block-id="9f97935f9ce3f16ac7e1fd981507de99"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="905" data-natural-height="272" data-lazy-loaded="" data-src="hicss2019/56802c70ce793a529742789af4a53c38.png"></div></div></section><section data-id="50941632e51bf634ab4f8659f0838f3f"><div class="sl-block" data-block-type="text" style="width: 1274px; left: 0px; top: 0px; height: auto;" data-block-id="5ce352231e8de3b297cd4ae56a7968d3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px;">
+<h2>Today: FOUR questions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1280px; left: 0px; top: 144px; height: auto;" data-block-id="e59202adcf82b1e665e537fb83dd14c2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; padding: 40px;" dir="ui">
+<p><span style="color:#FFA500">By the time you leave - you should be able to answer:</span></p>
+
+<p>What is the internet of things?</p>
+
+<p><s>Is it secure?</s> How is it insecure?</p>
+
+<p>What is this guy (and his team) doing about it?</p>
+
+<p>Why should I care / How can I use this?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5f2ab3667da2e318d73719eeaf727468" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 576px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(147, 196, 125);">
+<p><span style="color:#FFFFFF">Follow Along at: </span>slides.mlhale.com/hicss2019</p>
+</div></div></section><section class="stack" data-id="e6260dba18e885db81d44f8d3f0ff060"><section data-id="201a5a3a351b9b051abbb0e95eef12b1"><div class="sl-block" data-block-type="text" style="height: auto; width: 586px; left: 91px; top: 275px;" data-block-id="23c8ae798c9b5f57201ac969cc702a4a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);">
+<h2>Bonus Question:</h2>
+
+<h2><span style="color:#FFA500">Who is this guy?</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="002616fc09b071a0f72c03cbfec116ee" style="min-width: 4px; min-height: 4px; width: 363px; height: 481px; left: 774px; top: 94px;"><div class="sl-block-content" style="z-index: 12;"><img style="left: 0px; top: 0px; width: 373px; height: 532px;" data-natural-width="865" data-natural-height="1234" data-crop-x="0" data-crop-y="0" data-crop-width="0.973118" data-crop-height="0.904135" data-lazy-loaded="" data-src="hicss2019/93a9e6d118b32b1998ac985e30b8a181.png"></div></div></section><section data-id="e60945534523b4387dc101b34eedef22"><div class="sl-block" data-block-type="text" style="height: auto; width: 635px; left: 70px; top: 200px;" data-block-id="5e2e9a794ad36e3af8bc36fb16b636c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right;">
+<h3><span style="color:#FFA500"><span style="text-align:left">Dog Father, Husband, Software Engineer, Researcher, Teacher, Web Developer, Tabletop Gamer, Philosopher, Artist</span></span></h3>
+
+<p> </p>
+
+<p><span style="text-align:left">(roughly in that order)</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 443px; height: 332px; left: 730px; top: 72px;" data-block-id="feac6694c2f918fb321cfd8013a2bbf9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1440" data-natural-height="1080" data-lazy-loaded="" data-src="hicss2019/e9c8ba0a6285107d7de389e41af75acb.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 443px; height: 249px; left: 730px; top: 413px;" data-block-id="7280532a61aaaaadd16124c8398e9d26"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1920" data-natural-height="1080" data-lazy-loaded="" data-src="hicss2019/4c6e771e246c60fd06e22994869e9aee.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 50px; top: 643px;" data-block-id="8d06de7480fdd050f764eb4583c86cc5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: left;" dir="ui">
+<p><span style="font-size:1.0em"><span class="u-dir username">Tweet <a href="https://twitter.com/mlhale_" target="_blank">@<span class="u-linkComplex-target">mlhale_</span></a></span></span></p>
+</div></div></section><section data-id="4dae19cc43515546bdf9531fec39915c">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 50px; top: 643px;" data-block-id="de5c2bacae71394a6dd57022c231bfde"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<p><span style="font-size:1.0em"><span class="u-dir username">Tweet <a href="https://twitter.com/mlhale_" target="_blank">@<span class="u-linkComplex-target">mlhale_</span></a></span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6d5cce2a7ac0204f29809e3e73298948" style="min-width: 4px; min-height: 4px; width: 985px; height: 528px; left: -60px; top: 0px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1380" data-natural-height="740" data-lazy-loaded="" data-src="hicss2019/e77230fbbd1fa1a53c9ed5ad27d0bff3.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="86f941d82760b32880efc8f09cfb3b48" style="min-width: 4px; min-height: 4px; width: 702px; height: 501px; left: 560px; top: 154px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="788" data-natural-height="562" data-lazy-loaded="" data-src="hicss2019/45ecb110f93862d33e2b0ae04d6b1da2.png"></div></div></section></section><section class="stack" data-id="7ad183dcbf10e94a0a6c4b3f8de14643"><section data-id="be011bc2ae9eb0f61d24ecfd3a83edef"><div class="sl-block" data-block-type="text" style="height: auto; width: 536px; left: 52px; top: 268px;" data-block-id="8ffd13c129d3f3e667d8377e7c29549d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2>What is the Internet of Things?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 532px; height: 533px; left: 628px; top: 94px;" data-block-id="89c11d69c56fa59ec63bcba1db5cbe9f"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="668" data-natural-height="669" data-lazy-loaded="" data-src="hicss2019/39365e8ea0c5803519b2405ff75de66a.png"></div></div></section><section data-id="b373c14f83cee745748bc95e0515d472"><div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 800px; top: 242px;" data-block-id="66efabeb389a20f5e44e241ddb3fd802"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2>Sensors &amp; Actuators Everywhere</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 773px; height: 550px; left: 14px; top: 67px;" data-block-id="97834b5730d6418e5dc1e1aea436029e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1054" data-natural-height="750" data-lazy-loaded="" data-src="hicss2019/1437934e76cbecf96c445428f2f6d44d.png"></div></div></section><section data-id="f2e47c7e0f749e12f5d570a47b2cc87d"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="517fe4a8803756a2b72353df9bc4ad95"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 91%;">
+<h3><span style="color:#FFA500">Including on your wrist, in your cloths, in your home,</span></h3>
+
+<h3><span style="color:#FFA500">on your face, and ...</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 438px; height: 246px; left: 53px; top: 30px;" data-block-id="73de2fe68e0d471dffc9f6c11ea5e2fe"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="555" data-natural-height="312" data-lazy-loaded="" data-src="hicss2019/008cdab784fad82599bd99d5f9cc9c25.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 233px; height: 129px; left: 1004px; top: 44px;" data-block-id="eb445d641c38f5d2a0966d99d113b9cc"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="233" data-natural-height="129" data-lazy-loaded="" data-src="hicss2019/44db85eb1abaa900762cf121b0820f26.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 166px; height: 224px; left: 625px; top: 30px;" data-block-id="3914be8d1f4161834e1a188b2d27ce60"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="120" data-natural-height="162" data-lazy-loaded="" data-src="hicss2019/ed7cac1dc40a0e838237fa3a02aa3d79.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 569px; height: 320px; left: 701px; top: 400px;" data-block-id="f5e2ea4e57d25420a181d8238eb40ab7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="669" data-natural-height="376" data-lazy-loaded="" data-src="hicss2019/fffb6580737e138e9516a5a7989e9d8f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 91px; height: 64px; left: 1127px; top: 447px;" data-block-id="fdd76cc06ddd39df27e4c975d353a52a"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="91" data-natural-height="64" data-lazy-loaded="" data-src="hicss2019/068062e77cf649a42873c255eb5db20e.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 331px; height: 249px; left: 419px; top: 471px;" data-block-id="ace479efeaae04e3d899f5eabb67d61e"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="331" data-natural-height="249" data-lazy-loaded="" data-src="hicss2019/897c53e091952d417ff3eb6623465ea0.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 138px; height: 54px; left: 1099px; top: 173px;" data-block-id="e912c315d0cbf981f859f5074846cf52"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="138" data-natural-height="54" data-lazy-loaded="" data-src="hicss2019/f625ddfe6f3d08dd00d3ad71737cf375.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 176px; height: 166px; left: 80px; top: 521px;" data-block-id="32da8f4c962244d2e09dcb357c9f0747"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="176" data-natural-height="166" data-lazy-loaded="" data-src="hicss2019/29a03e85930572491865f2cd692511a4.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="935865e1a57f6c5da7e70ed37bbb4814" style="min-width: 4px; min-height: 4px; width: 248px; height: 248px; left: 72px; top: 432px;"><div class="sl-block-content" style="z-index: 20;"><img data-natural-width="450" data-natural-height="450" style="" data-lazy-loaded="" data-src="hicss2019/5bf7cb841d5237614d9a451090d55818.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6ce421415a5520054117978457c67667" style="min-width: 4px; min-height: 4px; width: 319px; height: 283px; left: 561px; top: 5px;"><div class="sl-block-content" style="z-index: 21;"><img data-natural-width="1000" data-natural-height="887" style="" data-lazy-loaded="" data-src="hicss2019/28e7dc5c320694001bd15b86b7cf6065.png"></div></div></section><section data-id="de0fa7f570493ede4e46758e88dd5ed1"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 680px; top: 280px;" data-block-id="528edd5c46370e96b2d876575abbb585"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">... (sometimes) In your Body</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 625px; height: 388px; left: 21px; top: 94px;" data-block-id="add43d8fab89331d454c2c0a1bddbcdc"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1720" data-natural-height="1068" data-lazy-loaded="" data-src="hicss2019/83ca7ea660a08cffc8c81ff9a57b5b97.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="403df5e4bd696b5874b8ebae39902078"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 14; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="" dir="ui">
+<pre>Image Credit: 
+</pre>
+
+<p>Natt Guran, Almost half a million pacemakers need a firmware update to avoid getting hacked</p>
+</div></div></section></section><section class="stack" data-id="eaafdcbe70c4aeee88176c3bb0a9228e"><section data-id="3ac0f407e6d882b28b7e4d1d4451c28e"><div class="sl-block" data-block-type="text" style="height: auto; width: 536px; left: 52px; top: 268px;" data-block-id="a57efc20f9bd89d3bfd7deff91f123c6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2>Security Implications in the <span style="color:#FFA500">Internet of Things</span>?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 532px; height: 533px; left: 628px; top: 94px; min-width: 4px; min-height: 4px;" data-block-id="2fcfed9aa6503b1bc16acdd48eacb2e4"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="668" data-natural-height="669" data-lazy-loaded="" data-src="hicss2019/39365e8ea0c5803519b2405ff75de66a.png"></div></div></section><section data-id="56eebf0f1a5779623a3c201d54e58303"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="551a5f6348e15366d4d287a000c770bb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">not just Hardware</span></h2>
+</div></div></section><section data-id="c6b13ccca1428c9e77ba07a6867aa5d6"><div class="sl-block" data-block-type="text" style="height: auto; width: 420px; left: 0px; top: 300px;" data-block-id="50b7ae39215f41aa45ffa151d04585ce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2>Lots of:</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 804px; height: 503px; left: 427px; top: 96px;" data-block-id="50db9593a71a86e3a96518bee6e7ca58"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1050" data-natural-height="657" data-lazy-loaded="" data-src="hicss2019/faa360c8d098c34baa47eb35add881bc.png"></div></div></section><section data-id="56b7216f60c47cb047757ae672d86eef"><div class="sl-block" data-block-type="text" style="height: auto; width: 420px; left: 0px; top: 300px;" data-block-id="568955d2aba29cea8e68966592213f03"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2>Lots of:</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 687px; height: 561px; left: 488px; top: 80px;" data-block-id="2788dcf75985285e31e76116a4d288eb"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="687" data-natural-height="561" data-lazy-loaded="" data-src="hicss2019/2e7c143f46c0499e1d8a4c178fac65d6.png"></div></div></section><section data-id="5115335a8b4de12062ac4b058fb9883a"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="1b3de9869dedd3a0d9c35f3b79fc498c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h3><font color="#ffa500">...this translates to many security challenges</font></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 438px; height: 246px; left: 53px; top: 30px; min-width: 4px; min-height: 4px;" data-block-id="96eb397bf615bd0483ee2a1377bde4ef"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="555" data-natural-height="312" data-lazy-loaded="" data-src="hicss2019/008cdab784fad82599bd99d5f9cc9c25.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 233px; height: 129px; left: 1004px; top: 44px; min-width: 4px; min-height: 4px;" data-block-id="c8b0fa4c23a4acf5a91e4afeb4668067"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="233" data-natural-height="129" data-lazy-loaded="" data-src="hicss2019/44db85eb1abaa900762cf121b0820f26.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 166px; height: 224px; left: 625px; top: 30px; min-width: 4px; min-height: 4px;" data-block-id="82a94cc1017dcb515c7cf3415308422d"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="120" data-natural-height="162" data-lazy-loaded="" data-src="hicss2019/ed7cac1dc40a0e838237fa3a02aa3d79.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 569px; height: 320px; left: 701px; top: 400px; min-width: 4px; min-height: 4px;" data-block-id="afc8f67e9a7eb5b84ba4e671dcb07513"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="669" data-natural-height="376" data-lazy-loaded="" data-src="hicss2019/fffb6580737e138e9516a5a7989e9d8f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 91px; height: 64px; left: 1127px; top: 447px; min-width: 4px; min-height: 4px;" data-block-id="0ad89723e0d93181732915d51dcb6d7b"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="91" data-natural-height="64" data-lazy-loaded="" data-src="hicss2019/068062e77cf649a42873c255eb5db20e.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 331px; height: 249px; left: 419px; top: 471px; min-width: 4px; min-height: 4px;" data-block-id="9c6fcca47c11433132f1965d49e062f4"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="331" data-natural-height="249" data-lazy-loaded="" data-src="hicss2019/897c53e091952d417ff3eb6623465ea0.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 138px; height: 54px; left: 1099px; top: 173px; min-width: 4px; min-height: 4px;" data-block-id="400cac71017facfcd04b3027c71b76bf"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="138" data-natural-height="54" data-lazy-loaded="" data-src="hicss2019/f625ddfe6f3d08dd00d3ad71737cf375.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 176px; height: 166px; left: 80px; top: 521px; min-width: 4px; min-height: 4px;" data-block-id="38ee58a6a1f1251259a95a22ec5a6154"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="176" data-natural-height="166" data-lazy-loaded="" data-src="hicss2019/29a03e85930572491865f2cd692511a4.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="66cc70753a8bf6727c15ee32a38fca69" style="min-width: 4px; min-height: 4px; width: 217px; height: 217px; left: 80px; top: 460px;"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="450" data-natural-height="450" data-lazy-loaded="" data-src="hicss2019/458bbdaede26837ca3cabab085306056.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 319px; height: 283px; left: 560px; top: 12px;" data-block-id="9e240aea311c50690cd902405cd803a4"><div class="sl-block-content" style="z-index: 21;"><img data-natural-width="1000" data-natural-height="887" style="" data-lazy-loaded="" data-src="hicss2019/28e7dc5c320694001bd15b86b7cf6065.png"></div></div></section><section data-id="8f22200cf2fcf3a828e70a7cd15a4e24"><div class="sl-block" data-block-type="text" style="height: auto; width: 745px; left: 15px; top: 13px;" data-block-id="73f65e05cb0b257d65c38e1209f9b491"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%; text-align: left;">
+<h2>(in) <span style="color:#FFA500">Security Landscape</span>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1248px; height: 569px; left: 15px; top: 131px;" data-block-id="7d5bcbed70c1d69a6436b7d96454a232"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1577" data-natural-height="719" data-lazy-loaded="" data-src="hicss2019/94a410300e5f67f0f486eb368ac94659.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 752px; height: 133px; left: 540px; top: 157px;" data-block-id="fbee8f232cf4a2468518544e33c18438"><div class="sl-block-style" style="z-index: 13; transform: rotate(356deg);"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2064" data-natural-height="366" data-lazy-loaded="" data-src="hicss2019/9877ede937a042e9fbf2a3284745810e.png"></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 493px; height: 71px; left: 176px; top: 621px;" data-block-id="213a85c37dc35b93f5688a76aa44e8ab"><div class="sl-block-style" style="z-index: 14; transform: rotate(356deg);"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="2318" data-natural-height="334" data-lazy-loaded="" data-src="hicss2019/f6c92ea62d796d32306c0c6a11359b2f.png"></div></div></div></section><section data-id="28fecf96465f5f496cbd0475ac85051b"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 732px; left: 247px; top: 14px;" data-block-id="176276a44cc49831ea0100a61d84adb5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Security <span style="color:#FFA500">Issues By Domain</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 619px; height: 556px; left: 31px; top: 92px;" data-block-id="c03ce37e6853ced71a2d97d1ca1dd012"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="741" data-natural-height="666" data-lazy-loaded="" data-src="hicss2019/077b637bcc7cbe0a2038c342b5253374.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 562px; left: 679px; top: 72px;" data-block-id="75f5fdde81cad78e92e54192ccac3509"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p><span style="font-size:0.7em">Don’t recognize data sensitivity or misuse</span></p>
+
+<p><span style="font-size:0.7em">May install malware or malicious apps</span></p>
+
+<p><span style="font-size:0.7em">Apps may be an invasion of privacy</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 679px; top: 238px;" data-block-id="6509a6d9a15034d61fac485a06dcac7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left;">
+<p><span style="font-size:0.7em">Standard Web attacks (XSS, SQL injection, CSRF, etc)</span></p>
+
+<p><span style="font-size:0.7em">Information Leakage (e.g. geotagging in social media)</span></p>
+
+<p><span style="font-size:0.7em">Secure data storage and acceptable data usage</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 679px; top: 391px;" data-block-id="39e5282b11b079861858da4c02c42a54"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="font-size:0.7em">Third party tracking apps accessing data (stored/in-transit)</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">Data encoding and transmission, Resource consumption</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">App-level encapsulation, OS Libraries and Drivers</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 679px; top: 549px;" data-block-id="590fb2e48b4f59ae7a6bf60b41afd601"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:left"><span style="font-size:0.7em">Physical tampering</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">Data encoding and transmission, Resource consumption</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">Firmware, OS Libraries and Drivers</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 221px; left: 64px; top: 573px;" data-block-id="41140fc527cb44860cc66e7765d58d9d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p>IoT /</p>
+</div></div></section><section data-id="b12a29a274381a5fe08cd312d26899a1"><div class="sl-block" data-block-type="text" style="height: auto; width: 1214px; left: 37px; top: 14px;" data-block-id="4ac1091c1a4554401a916415c0ff6fd9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Inter- Domain Security <span style="color:#FFA500">Issues</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 619px; height: 556px; left: 31px; top: 92px; min-width: 4px; min-height: 4px;" data-block-id="f15e0bc4cd60b92e6c756d0b6b15278e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="741" data-natural-height="666" data-lazy-loaded="" data-src="hicss2019/077b637bcc7cbe0a2038c342b5253374.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 674px; top: 302px;" data-block-id="cf69e9d4534c3029ea8e6db8de9606bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:21px">Insecure Wi-Fi or 4G</span></p>
+
+<p style="text-align:left"><span style="font-size:21px">Lack of API Security</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 674px; top: 453px;" data-block-id="564665aa1bc5cb59ff2e3e0ac492220f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;"><span style="font-size:0.7em">Lack of over-the-air encryption</span></p>
+
+<p style="text-align: left;"><span style="font-size:0.7em">Man-in-the-middle attacks</span></p>
+
+<p style="text-align: left;"><span style="font-size:0.7em">Denial of service / Resource Consumption</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c45e125685fcefd76f5902702fa5da95" style="height: auto; min-width: 30px; min-height: 30px; width: 221px; left: 64px; top: 573px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>IoT /</p>
+</div></div></section><section data-id="b9c1d97fe18113be78d3dab8fa989dc1"><div class="sl-block" data-block-type="text" style="height: auto; width: 1214px; left: 37px; top: 14px;" data-block-id="f7c8f8d62a454f9ff10bb2adfbef3160"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>
+<span style="color:#FFA500">Attack Vectors</span> for a Typical App</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1075px; height: 451px; left: 103px; top: 135px;" data-block-id="9c90ab53430fb32e548fcdb46c270f8b"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1436" data-natural-height="603" data-lazy-loaded="" data-src="hicss2019/9de4ca8d4a187fb2b9b68742af13a2e0.png"></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="f77b3738c79fd8e1873341a3a103cd18" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 375px; top: 523px;"><div class="sl-block-content" data-line-x1="4" data-line-y1="219" data-line-x2="81" data-line-y2="265" data-line-color="#ff0000" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 12;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="77" height="46" viewbox="4 219 77 46"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="13.5" y1="224.5" x2="81.5" y2="265.5"></line><line stroke="#ff0000" stroke-width="7" x1="13.5" y1="224.5" x2="81.5" y2="265.5"></line><polygon fill="#ff0000" transform="translate(13,224) rotate(120.854)" points="0,10.5 10.5,-10.5 -10.5,-10.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 238px; left: 119px; top: 531px;" data-block-id="9902049f0fe6d141f0601f5a691eb082"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<p>IoT Domain</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="339187fb7f58a53c23eb502d34e8b089" style="height: auto; min-width: 30px; min-height: 30px; width: 352px; left: 704px; top: 546px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(0, 0, 0); font-size: 64%; letter-spacing: -0.04em;" data-has-letter-spacing="">
+<p>Tampering / Malware</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 301px; left: 259px; top: 143px;" data-block-id="51be52af92e6b0969feb74171dedb58f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); text-align: center;">
+<p>IoT Application </p>
+</div></div></section><section data-id="016fc854f265f8bd4676f90a8a6534f5"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="6f38bc9c806a5bfc4e6006bbf16895be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">Ex. Scenario</span></h2>
+</div></div></section><section data-id="d7a77cf5b675b34822f16aff75a3ba58"><div class="sl-block" data-block-type="text" style="height: auto; width: 785px; left: 0px; top: 313px;" data-block-id="8a69e3e77da3f124b9aa550419d46dce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">Consider this Pancreas</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 440px; height: 529px; left: 800px; top: 72px;" data-block-id="131ea213d4337aea42d4e02d9d24cc5c"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="440" data-natural-height="529" data-lazy-loaded="" data-src="hicss2019/1c43e803410e96cb7c1c9d9745fd2b74.png"></div></div></section><section data-id="e3b9628fb149d367c290ce52c0786380"><div class="sl-block" data-block-type="text" style="height: auto; width: 785px; left: 0px; top: 313px;" data-block-id="1cf942453758d1d90d2a2321e69bd2ce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">That Is a nice Pancreas...</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 440px; height: 529px; left: 800px; top: 72px; min-width: 4px; min-height: 4px;" data-block-id="3d8e0d63453e6dada69b81e35b533d44"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="440" data-natural-height="529" data-lazy-loaded="" data-src="hicss2019/1c43e803410e96cb7c1c9d9745fd2b74.png"></div></div></section><section data-id="0eb304e24b27fd96af4f1785a3064bbb"><div class="sl-block" data-block-type="text" style="height: auto; width: 785px; left: 0px; top: 313px;" data-block-id="a0c3a3f024b16387fb7242c272665e1f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h2><span style="color:#FFA500">OKay.. Consider this Pancreas</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 440px; height: 529px; left: 800px; top: 72px; min-width: 4px; min-height: 4px;" data-block-id="1e7579da8ed5123bd485f02f8f6f8a23"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="440" data-natural-height="529" data-lazy-loaded="" data-src="hicss2019/1c43e803410e96cb7c1c9d9745fd2b74.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="209d405716f8cc025f38b3063e3157d2" style="min-width: 4px; min-height: 4px; width: 225px; height: 225px; left: 1008px; top: 201px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="225" data-natural-height="225" data-lazy-loaded="" data-src="hicss2019/bfec8900142e284fd03a9fcf77436622.png"></div></div></section><section data-id="b1f72827a16124287a508a732181ff04"><div class="sl-block" data-block-type="text" style="height: auto; width: 785px; left: 0px; top: 313px;" data-block-id="8a84c324f9ea68f7e22ee67cf8730fc7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">Not so Nice.</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 440px; height: 529px; left: 800px; top: 72px; min-width: 4px; min-height: 4px;" data-block-id="7ce86bb54e708ef607d94f086aa85325"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="440" data-natural-height="529" data-lazy-loaded="" data-src="hicss2019/1c43e803410e96cb7c1c9d9745fd2b74.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 225px; height: 225px; left: 1008px; top: 201px; min-width: 4px; min-height: 4px;" data-block-id="b49a2038856acac007a46bf7375b6c49"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="225" data-natural-height="225" data-lazy-loaded="" data-src="hicss2019/bfec8900142e284fd03a9fcf77436622.png"></div></div></section><section data-id="9eccf43756355fcee07327ede8b4aab6">
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="2b9c87d5a72251db594cb3b62b21d829"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Image Credit: Associated Press
+Artificial Pancreas Makers Race to Market, <em>Discover</em>, 2016.
+</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 468px; height: 533px; left: 407px; top: 94px;" data-block-id="43b295c47d32f0f7f67254bdc59aa778"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="900" data-natural-height="1025" data-lazy-loaded="" data-src="hicss2019/ff0e0137124e911fa2fdbd42123fc325.png"></div></div></section><section data-id="477be13e720554ca688f680f0268d629">
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="7f71871db01fb8026fc516a1e56bbd9d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Image Credit: Medtronic
+Medtronic MiniMed 640G</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 900px; height: 600px; left: 193px; top: 35px;" data-block-id="5447297d7bea7c34cc71394b5245a656"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="900" data-natural-height="600" data-lazy-loaded="" data-src="hicss2019/6917e95bca01996e8fd5cfff77845d7a.png"></div></div></section><section data-id="93fc108083e563f40628e7393d7566f6"><div class="sl-block" data-block-type="image" style="width: 1075px; height: 535px; left: 103px; top: 93px; min-width: 4px; min-height: 4px;" data-block-id="9c25ca384f59daa2165304207ac26f17"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1600" data-natural-height="796" data-lazy-loaded="" data-src="hicss2019/bb7389ff5f63411a9cb2addd18becf75.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="1266f6be14a55102bce98f6d728bbf7d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Image Credit: Jay Smith
+Artificial Pancreas Makers Race to Market, <em>Discover</em>, 2016.
+</pre>
+</div></div></section><section data-id="d31f4a09d31f778aec4e1e90144efdb7"><div class="sl-block" data-block-type="text" style="width: 1280px; left: 0px; top: 283px; height: auto;" data-block-id="f70ac2034298a357eb9e3677c1111c00"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 10; padding: 40px;">
+<h2>Note:<span style="color:#FFA500"> I'm not an expert on Pancreata</span>
+</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+</section><section data-id="d4af6ba0ddb2dd2ac21fba8b19d497a4"><div class="sl-block" data-block-type="text" style="width: 1280px; left: 0px; top: 283px; height: auto;" data-block-id="df9ed25d42d83f96474c132b631f58d9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 10; padding: 40px;">
+<h2>I am Interested <span style="color:#FFA500">in Bluetooth </span>
+</h2>
+
+<h2>
+<span style="color:#FFA500">and IOT Security </span>Though</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+</section><section data-id="eee2a87142fe4c941dec9239dfde092c">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 612px; height: auto;" data-block-id="14fecd1838d8d0580b06676009f8b432"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="">
+<pre>Image Credit: Screenshot of
+http://integrateddiabetes.com/insulin-pump-comparisons/</pre>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 592px; height: 571px; left: 595px; top: 72px;" data-block-id="386e4fb3499a5b3052c65c256850ee7b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1399" data-natural-height="1350" data-lazy-loaded="" data-src="hicss2019/073fd0649178f165088bd6d9dbbf4e20.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 567px; left: 6px; top: 328px;" data-block-id="598035aba28af71c27359f0f12ed0909"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Advertised<span style="color:#FFA500"> as <em>features</em> </span>not<span style="color:#FFA500"> <em>drawbacks.</em></span></p>
+</div></div></section><section data-id="79e07eaa76e7434bf255e6f668036207"><div class="sl-block" data-block-type="text" style="width: 548px; left: 686px; top: 222px; height: auto;" data-block-id="0b5dbdd65856cf53ff02258995f6218d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 10; padding: 40px;" dir="ui">
+<h3>Fact:<br>
+<span style="color:#FFA500">Every Bluetooth Device is Hackable</span>
+</h3>
+
+<p> </p>
+
+<p><span style="color:#FFA500">"BlueBorne"</span></p>
+</div></div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 618px; height: 468px; left: 51px; top: 89px;" data-block-id="b9bb21f9e739145519dc474a649d8bca"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1784" data-natural-height="1350" data-lazy-loaded="" data-src="hicss2019/8a28064d94afbb1702edeefb550a41c2.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="f32f52903b13eef0bf7cc12718bc76fb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 13; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="" dir="ui">
+<pre>Image Credit: 
+</pre>
+
+<p>Josh Miller / CNET</p>
+</div></div></section><section data-id="e5903bdb532ef8fb6f97f8048f92cf15"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="7aefd58d60991e459fcd05b96746cd89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 91%;">
+<h2><span style="color:#FFA500">Ex. Scenario 2</span></h2>
+</div></div></section><section data-id="82b184576af9b9a6d5d257bd7661c898"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 625px; height: 388px; left: 21px; top: 94px;" data-block-id="6915413f0064acf675755e319e94447d"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1720" data-natural-height="1068" data-lazy-loaded="" data-src="hicss2019/83ca7ea660a08cffc8c81ff9a57b5b97.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1274px; left: 6px; top: 608px; height: auto;" data-block-id="9590278b53d979030ad10b522f7f56ba"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12; padding: 40px; line-height: 0.975; font-size: 48%;" data-has-line-height="" dir="ui">
+<pre>Image Credit: 
+</pre>
+
+<p>Natt Guran, Almost half a million pacemakers need a firmware update to avoid getting hacked</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 548px; left: 695px; top: 107px; height: auto;" data-block-id="27cc4bcfad834db4bee59e6c59695fb7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 13; padding: 40px;" dir="ui">
+<h2><br></h2>
+<h2><br></h2>
+<h2>PaceMakers</h2>
+</div></div></section><section data-id="c100a35d32b287dfd88c0437869dfb57"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="4643ece5255504ea5f61c0c56e79cf0b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3><font color="#ffa500">You Get the idea...</font></h3>
+</div></div></section><section data-id="41d85df65b2d921372d0a96bd61abb1b"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="7d86419df4dd39fc57a92d81d25db24b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>BE Scared!</h2>
+</div></div></section></section><section class="stack" data-id="1003a7de421238ac1a43e38b2fd11656"><section data-id="a9f340ea4d6ca1bdabcca251c7c6afc5"><div class="sl-block" data-block-type="text" style="height: auto; width: 667px; left: 613px; top: 313px;" data-block-id="b2e05af6771ee3976b6057fe0daba2fe"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<h3>Our Contribution: <span style="color:#FFA500">SecuWear</span>
+</h3>
+
+<p>Basic idea: Empower software engineers and security analysts with tooling that helps them identify and mitigate security issues in their IoT apps</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 583px; height: 387px; left: 29px; top: 167px;" data-block-id="4667f08fde6c4069a2cadb6ae65aeac4"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="583" data-natural-height="387" data-lazy-loaded="" data-src="hicss2019/068801d247a3f4849d5832df11f0986e.png"></div></div></section><section data-id="1e54afe7ceb8dfab2c56bd9d183481b3"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 72px; height: auto;" data-block-id="688fd0541c7f0b3bdeca1431458dd6e3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h3>We've created Audit hooks Applicable to All portions of an IoT/Wearable App</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="94b456a3a3b7f1374081369de13d5c29" style="height: auto; min-width: 30px; min-height: 30px; width: 482px; left: 110px; top: 288px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<pre><span style="color:#FF8C00"><strong>Eventitem</strong>:</span>
+   created: datetime
+   domain: string
+   eventtype: string
+   event: string
+   codereference: string
+   data: string
+   size: string
+   run: integer</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="88684032b0fe3fb81f7f033b9a9908f1" style="height: auto; min-width: 30px; min-height: 30px; width: 639px; left: 620px; top: 419px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:#FF8C00">Standard Interface:</span> Can be applied to mobile, web, and IoT components in the app. </p>
+</div></div></section><section data-id="a85e45c060cc3087658793c995fbd9c4"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 104px; top: 24px; height: auto;" data-block-id="cdd167f24d20a0549a56bf6140e17472"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Novelty?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 595px; left: 47px; top: 171px; height: auto;" data-block-id="cf7ec73401dcf2704a5812ef986d81be"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; text-align: left;">
+<p>Individually audit hooks aren't terribly novel and are already used to wide effect for attack detection (e.g. network monitoring tools).</p>
+
+<p> </p>
+
+<p>Taken together though, <span style="color:#FF8C00">few tools exist to analyze data across various domains of an IoT/Wearable Application</span>.</p>
+
+<p> </p>
+
+<p>This limits the ability of attack detectors to identify problems that span domains.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 515px; height: 463px; left: 677px; top: 168px;" data-block-id="e55d42fff43d000e99af5e16d6b5ac8f"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="741" data-natural-height="666" data-lazy-loaded="" data-src="hicss2019/077b637bcc7cbe0a2038c342b5253374.png"></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="9a171348d9f97f5b3bd260365dc93300" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 1223px; top: 183px;"><div class="sl-block-content" data-line-x1="683" data-line-y1="352" data-line-x2="683" data-line-y2="-77" data-line-color="#ff9900" data-line-start-type="arrow" data-line-end-type="arrow" style="z-index: 13;" data-line-width="8px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="429" viewbox="683 -77 1 429"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="683" y1="340" x2="683" y2="-65"></line><line stroke="#ff9900" stroke-width="8" x1="683" y1="340" x2="683" y2="-65"></line><polygon fill="#ff9900" transform="translate(683,340) rotate(0)" points="0,12 12,-12 -12,-12"></polygon><polygon fill="#ff9900" transform="translate(683,-65) rotate(0)" points="0,-12 12,12 -12,12"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 221px; left: 677px; top: 565px;" data-block-id="8ac7fd72cdf03cdf095d23c3e6aae51d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>IoT /</p>
+</div></div></section><section data-id="43b59b1ad63bcf1135f4087d5006365d"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 0px;" data-block-id="b3e694f512211bbbaed226a49bc5c591"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:#FFA500">SecuWear</span>: Made with Open source</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1075px; height: 547px; left: 103px; top: 87px;" data-block-id="5543f24a8f0e1e4366058835c7c6ef63"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1442" data-natural-height="734" data-lazy-loaded="" data-src="hicss2019/55eb80dd445e0236eee038770017731b.png"></div></div></section><section data-id="ead9429bfff37868e5d8eeba1c9639a4"><div class="sl-block" data-block-type="text" style="height: auto; width: 279px; left: 12px; top: 270px;" data-block-id="5210e280f30d89b0953321134538eea0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:#FFA500">SecuWear</span>: Attack Vector Exploration Tooling</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="4b93028cabad624943da94f180000b90" style="min-width: 4px; min-height: 4px; width: 962px; height: 636px; left: 313px; top: 33px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1531" data-natural-height="1012" data-lazy-loaded="" data-src="hicss2019/17822c4c9e17284768f0c9f86ded1174.png"></div></div></section><section data-id="4d840ad5c3f55602bb713d12ffe104ad"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="c9d3431cef6adfe7b5b26ec055c124a1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Audit Hooks for Network Sniffing</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1075px; height: 180px; left: 103px; top: 9px;" data-block-id="1d964dadf316505684fd02c3d40ef879"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1258" data-natural-height="211" data-lazy-loaded="" data-src="hicss2019/a94197a460ab1c26b90e630b4b6424b2.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 460px; height: 326px; left: 704px; top: 269px;" data-block-id="9d0c8e15874ab341a19d9d2d586e4c69"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="815" data-natural-height="578" data-lazy-loaded="" data-src="hicss2019/581cef5b4ba74251686af7e6d9f1cd4d.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 418px; height: 361px; left: 103px; top: 269px;" data-block-id="a7a8f616bb5b9a1845aee4d69d394ffa"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="833" data-natural-height="720" data-lazy-loaded="" data-src="hicss2019/9637663a3ef4da5c830aff040229eebb.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="32c5a658b0dbe2a7c064ebcf015b2b95" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 308px; top: 230px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left;">
+<p>https://github.com/KimiNewt/pyshark</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b6004c1407da2dfa14b83f41ef86b9f4" style="height: auto; min-width: 30px; min-height: 30px; width: 730px; left: 542px; top: 600px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; text-align: right;">
+<p>https://github.com/greatscottgadgets/ubertooth</p>
+</div></div></section><section data-id="aa427abcd820471322baf37bb7f985b8"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="de73cb3e756f17b64b70006a80d9028c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Bluetooth Sniffing Process</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1075px; height: 181px; left: 103px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="842b5d89cf0c0361ad45caf91f94a2d9"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1285" data-natural-height="216" data-lazy-loaded="" data-src="hicss2019/7cec8078c04ec63fb8b0ffab56cf6699.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 929px; height: 471px; left: 249px; top: 190px;" data-block-id="893894d18c45e7b0d8b6700ffb5de011"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1035" data-natural-height="525" data-lazy-loaded="" data-src="hicss2019/5cc392b55db4fbeea38946861ffb8912.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 174px; height: 181px; left: 249px; top: 0px;" data-block-id="79e43377f6489bf969f40d31c65857ea"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 173 181"><defs><clippath id="shape-mask-208-1509520336324"><rect width="173" height="181" rx="0" ry="0"></rect></clippath></defs><rect width="173" height="181" rx="0" ry="0" clip-path="url(#shape-mask-208-1509520336324)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 400px; top: 155px;" data-block-id="d8f4b45531ecaa7d7bc73a1753938846"><div class="sl-block-content" data-line-x1="314" data-line-y1="100" data-line-x2="-140" data-line-y2="-105" data-line-color="#e69138" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 15;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="454" height="205" viewbox="-140 -105 454 205"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="314" y1="100" x2="-132" y2="-101"></line><line stroke="#e69138" stroke-width="6" x1="314" y1="100" x2="-132" y2="-101"></line><polygon fill="#e69138" transform="translate(-132,-101) rotate(-65.699)" points="0,-9 9,9 -9,9"></polygon></svg></div></div></section><section data-id="33cdf0c9f3fb48f1f1ffb79023991646"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="8066247fcbbf98ac4533d436116b472e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Bluetooth Sniffing Process</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1075px; height: 181px; left: 103px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="02b14f0c36d4f628b9348215019f2ffa"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1285" data-natural-height="216" data-lazy-loaded="" data-src="hicss2019/7cec8078c04ec63fb8b0ffab56cf6699.png"></div></div>
+
+<div class="sl-block" data-block-type="shape" style="width: 174px; height: 181px; left: 407px; top: 0px;" data-block-id="7a3c49b3540d3bf7b1ba74b720dcdd56"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 175 181"><defs><clippath id="shape-mask-209-1509520337403"><rect width="175" height="181" rx="0" ry="0"></rect></clippath></defs><rect width="175" height="181" rx="0" ry="0" clip-path="url(#shape-mask-209-1509520337403)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 539px; top: 115px;" data-block-id="e962d167cdedcf811dfd11f4824bd116"><div class="sl-block-content" data-line-x1="312" data-line-y1="114" data-line-x2="-1" data-line-y2="-145" data-line-color="#e69138" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 16;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="313" height="259" viewbox="-1 -145 313 259"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="312" y1="114" x2="6" y2="-139"></line><line stroke="#e69138" stroke-width="6" x1="312" y1="114" x2="6" y2="-139"></line><polygon fill="#e69138" transform="translate(6,-139) rotate(-50.393)" points="0,-9 9,9 -9,9"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 351px; height: 120px; left: 283px; top: 464px;" data-block-id="b2ec923467302600cf88aceac517cbb9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 352 120"><defs><clippath id="shape-mask-210-1509520337406"><rect width="352" height="120" rx="0" ry="0"></rect></clippath></defs><rect width="352" height="120" rx="0" ry="0" clip-path="url(#shape-mask-210-1509520337406)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 895px; height: 431px; left: 283px; top: 189px;" data-block-id="9f9e824add579ac3d6cc93989bd9469c"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1080" data-natural-height="520" data-lazy-loaded="" data-src="hicss2019/46129a3a3b4c3c8ff07e188c334c73eb.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 7px; top: 341px;" data-block-id="f8f3cbef54ed6ce1a5e934d1343da6d9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p>Some accelerometer data sent from a wearable device</p>
+</div></div></section><section data-id="836137b238d7173bc12f3b698f68cca5"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="6ddb13f0bf3f0a96eb819215ed1095bb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Android Auditing</h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 638px; left: 15px; top: 427px;" data-block-id="e9f5cb96599790c13b6d5d0b5fe407b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p>Some code that fetches accelerometer data sent from a wearable device</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b6e5f9e0c91671371b5763389113cabd" style="min-width: 4px; min-height: 4px; width: 965px; height: 311px; left: 284px; top: 89px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1266" data-natural-height="408" data-lazy-loaded="" data-src="hicss2019/df2dbe7541f88bfeec427443e774a639.png"></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="d3c0e277c02610b0b5cd552356887deb" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 120px; top: 216px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="200" data-line-x2="200" data-line-y2="0" data-line-color="#e69138" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 14;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="200" height="200" viewbox="0 0 200 200"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0.5" y1="200.5" x2="193.5" y2="7.5"></line><line stroke="#e69138" stroke-width="7" x1="0.5" y1="200.5" x2="193.5" y2="7.5"></line><polygon fill="#e69138" transform="translate(193,7) rotate(45)" points="0,-10.5 10.5,10.5 -10.5,10.5"></polygon></svg></div></div></section><section data-id="92ff2df297dd93bfe24d50bbef80f648"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="31de91cf6793a878ab697bac7a3ca79c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Android auditing</h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 638px; left: 15px; top: 427px;" data-block-id="c342207ea4dc82c824220a2c2a696e8f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p>Also: A great place for an audit hook to be inserted, that allows analysis to carry forward the tracking of a particular operation (e.g. accelerometer in this case)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 965px; height: 311px; left: 284px; top: 89px; min-width: 4px; min-height: 4px;" data-block-id="b445c9f7279a2034a54522a049672a79"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1266" data-natural-height="408" data-lazy-loaded="" data-src="hicss2019/df2dbe7541f88bfeec427443e774a639.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 120px; top: 216px;" data-block-id="2e9e4815635a57861062c78822a6fcd6"><div class="sl-block-content" data-line-x1="0" data-line-y1="200" data-line-x2="200" data-line-y2="0" data-line-color="#e69138" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 13;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="200" height="200" viewbox="0 0 200 200"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0.5" y1="200.5" x2="193.5" y2="7.5"></line><line stroke="#e69138" stroke-width="7" x1="0.5" y1="200.5" x2="193.5" y2="7.5"></line><polygon fill="#e69138" transform="translate(193,7) rotate(45)" points="0,-10.5 10.5,10.5 -10.5,10.5"></polygon></svg></div></div></section><section data-id="d307ecbe1cc8a240005b8d53b4d5a8e9"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 661px;" data-block-id="377748f38758145f681f23760c6e8eef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Web auditing</h3>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 638px; left: 348px; top: 280px;" data-block-id="e1462f5ecfe9051194978bfd254ea9a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p>Similarly, one can add hooks into a web API</p>
+</div></div></section><section data-id="91b2e0c8272f015d84832c5804a83911"><div class="sl-block" data-block-type="text" style="height: auto; width: 279px; left: 12px; top: 270px;" data-block-id="17861f57436080fd8a178d290bd6d74c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>
+<span style="color:#FFA500">REsult</span>: IoT Application-Wide Audit Trail</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 962px; height: 636px; left: 313px; top: 33px; min-width: 4px; min-height: 4px;" data-block-id="ec29bfd86515af6210c3aaf20eab33f7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1531" data-natural-height="1012" data-lazy-loaded="" data-src="hicss2019/17822c4c9e17284768f0c9f86ded1174.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="91127fab342a4884ef9a85a4353e9198" style="min-width: 4px; min-height: 4px; width: 124px; height: 89px; left: 491px; top: 271px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 124 89"><defs><clippath id="shape-mask-3-1547062139955"><rect width="124" height="89" rx="0" ry="0"></rect></clippath></defs><rect width="124" height="89" rx="0" ry="0" clip-path="url(#shape-mask-3-1547062139955)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 124px; height: 89px; left: 732px; top: 271px;" data-block-id="e811ccacb1d521dc05f42eddf1aab7f2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 124 89"><defs><clippath id="shape-mask-4-1547062171908"><rect width="124" height="89" rx="0" ry="0"></rect></clippath></defs><rect width="124" height="89" rx="0" ry="0" clip-path="url(#shape-mask-4-1547062171908)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 124px; height: 54px; left: 625px; top: 390px;" data-block-id="0a390b0c44082a4d1f3b01f861c7ce59"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 124 53"><defs><clippath id="shape-mask-5-1547062176538"><rect width="124" height="53" rx="0" ry="0"></rect></clippath></defs><rect width="124" height="53" rx="0" ry="0" clip-path="url(#shape-mask-5-1547062176538)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 124px; height: 54px; left: 880px; top: 389px;" data-block-id="66616e8229209df84adde1baac6a9e67"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 16;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 124 53"><defs><clippath id="shape-mask-7-1547062191868"><rect width="124" height="53" rx="0" ry="0"></rect></clippath></defs><rect width="124" height="53" rx="0" ry="0" clip-path="url(#shape-mask-7-1547062191868)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="12"></rect></svg></div></div></section></section><section class="stack" data-id="d4774340d65d7296299be932a0193416"><section data-id="bd9cd536bb850e549131446e1aaf3bc0"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 313px;" data-block-id="fcd7a46923fe596784e5ab2cfc50ace3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Why Should <span style="color:#FFA500">you care</span>? /<br>
+How can you <span style="color:#FF8C00">use this</span>?</h3>
+</div></div></section><section data-id="5d4ad9d1df777d4b1e85e72d6adb22df"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 273px; height: auto;" data-block-id="66e066714a2449f91e78015ca5c336c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h1>Experimental EvaLuation</h1>
+</div></div></section><section data-id="7218bee2beb94dee6c77d1dcaf0a52fb"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="a5d10b7a2afc9c901984929613486557"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Simple Case Study as a Proof of Concept</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="162099b90177d47f2d8c6db709ce9ea7" style="min-width: 4px; min-height: 4px; width: 848px; height: 308px; left: 240px; top: 237px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="848" data-natural-height="308" data-lazy-loaded="" data-src="hicss2019/2d5404415b034c8994592d7303ad31e3.png"></div></div></section><section data-id="9919c38006a34c23802f441fb29dff27"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="57e261181529d254555ff5ac5b6beda6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Proof of Concept: apply Audit Hooks</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 848px; height: 308px; left: 240px; top: 237px; min-width: 4px; min-height: 4px;" data-block-id="55446e21895752caa15408a148c0d4c5"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="848" data-natural-height="308" data-lazy-loaded="" data-src="hicss2019/2d5404415b034c8994592d7303ad31e3.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 339px; top: 138px;" data-block-id="597fef527009dace458905c119f7180d"><div class="sl-block-content" data-line-x1="-201" data-line-y1="-123" data-line-x2="-10" data-line-y2="91" data-line-color="#ff9900" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 12;" data-line-width="9px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="191" height="214" viewbox="-201 -123 191 214"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-200.5" y1="-122.5" x2="-18.5" y2="81.5"></line><line stroke="#ff9900" stroke-width="9" x1="-200.5" y1="-122.5" x2="-18.5" y2="81.5"></line><polygon fill="#ff9900" transform="translate(-19,81) rotate(138.25)" points="0,-13.5 13.5,13.5 -13.5,13.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 418px; top: 138px;" data-block-id="034ce349cff014ab604a4ce73e3b5b76"><div class="sl-block-content" data-line-x1="-174" data-line-y1="-102" data-line-x2="-10" data-line-y2="91" data-line-color="#ff9900" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 13;" data-line-width="9px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="164" height="193" viewbox="-174 -102 164 193"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-173.5" y1="-101.5" x2="-18.5" y2="81.5"></line><line stroke="#ff9900" stroke-width="9" x1="-173.5" y1="-101.5" x2="-18.5" y2="81.5"></line><polygon fill="#ff9900" transform="translate(-19,81) rotate(139.644)" points="0,-13.5 13.5,13.5 -13.5,13.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 720px; top: 144px;" data-block-id="959c2b275c176a7126293bf43c708e4b"><div class="sl-block-content" data-line-x1="-132" data-line-y1="-44" data-line-x2="-10" data-line-y2="91" data-line-color="#ff9900" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 14;" data-line-width="9px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="122" height="135" viewbox="-132 -44 122 135"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-131.5" y1="-43.5" x2="-18.5" y2="81.5"></line><line stroke="#ff9900" stroke-width="9" x1="-131.5" y1="-43.5" x2="-18.5" y2="81.5"></line><polygon fill="#ff9900" transform="translate(-19,81) rotate(137.896)" points="0,-13.5 13.5,13.5 -13.5,13.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 622px; top: 138px;" data-block-id="cf471c88c976e739b7cc9bf053e84739"><div class="sl-block-content" data-line-x1="-150" data-line-y1="-79" data-line-x2="-10" data-line-y2="91" data-line-color="#ff9900" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 15;" data-line-width="9px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="140" height="170" viewbox="-150 -79 140 170"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-149.5" y1="-78.5" x2="-18.5" y2="81.5"></line><line stroke="#ff9900" stroke-width="9" x1="-149.5" y1="-78.5" x2="-18.5" y2="81.5"></line><polygon fill="#ff9900" transform="translate(-19,81) rotate(140.528)" points="0,-13.5 13.5,13.5 -13.5,13.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 260px; top: 100px;" data-block-id="8cd18a12a1933d7b80e01914f5f33ccc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>Audit Hooks</p>
+</div></div></section><section data-id="a40149cf2fc930d569d2eb6397f0adc2"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="e7fb63741306bc6b4123c44810b3858e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Attack Vector 1: CodE Injection -&gt; Exfiltration</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 632px; height: 280px; left: 296px; top: 262px;" data-block-id="ef4b9210b3c41ea0e01e27bd988c3d6a"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="880" data-natural-height="390" style="" data-lazy-loaded="" data-src="hicss2019/1e6b7a8daf92efd8c346c043ac3e58cd.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="2811d566a334e564c82d75fe49785cc5" style="min-width: 4px; min-height: 4px; width: 176px; height: 84px; left: 507px; top: 348px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 176 84"><defs><clippath id="shape-mask-8-1547066028176"><rect width="176" height="84" rx="0" ry="0"></rect></clippath></defs><rect width="176" height="84" rx="0" ry="0" clip-path="url(#shape-mask-8-1547066028176)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="14"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 176px; height: 84px; left: 712px; top: 384px;" data-block-id="5fbdd01fb5f20c1e77963ae862f8a6d6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 176 84"><defs><clippath id="shape-mask-9-1547066048649"><rect width="176" height="84" rx="0" ry="0"></rect></clippath></defs><rect width="176" height="84" rx="0" ry="0" clip-path="url(#shape-mask-9-1547066048649)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="14"></rect></svg></div></div></section><section data-id="b3feb69051658b94ef54a656523867e5"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="96c0614bc3532197ae6fe01c96d11fcf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Attack Vector 2: Code Injection -&gt; Exfiltration/DOS</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="7a3f41d059343b17f063ef28a14d5760" style="min-width: 4px; min-height: 4px; width: 905px; height: 404px; left: 188px; top: 216px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="906" data-natural-height="404" data-lazy-loaded="" data-src="hicss2019/c1af09c6b80a59e93242597091488aa7.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 176px; height: 84px; left: 697px; top: 296px;" data-block-id="2c00475f1db1f3c97c69aac08ca233f8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 176 84"><defs><clippath id="shape-mask-10-1547066070796"><rect width="176" height="84" rx="0" ry="0"></rect></clippath></defs><rect width="176" height="84" rx="0" ry="0" clip-path="url(#shape-mask-10-1547066070796)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="14"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 176px; height: 84px; left: 704px; top: 396px;" data-block-id="133547e984783cd9f1964212afdcc7ce"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#ff9900" data-shape-stroke-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 176 84"><defs><clippath id="shape-mask-12-1547067033442"><rect width="176" height="84" rx="0" ry="0"></rect></clippath></defs><rect width="176" height="84" rx="0" ry="0" clip-path="url(#shape-mask-12-1547067033442)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff9900" stroke-width="14"></rect></svg></div></div></section><section data-id="47be5706e1e2a7c2d05a56b7c04fd334"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 343px;" data-block-id="d28860389e9dccf9093b8ef4c99798d5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Question 1: Can <span style="color:#FF8C00">we Detect these Attacks</span>?</h3>
+
+<h3>Question 2: Is our data <span style="color:#FF8C00">helpful for Mitigation Efforts</span>?</h3>
+
+<p> </p>
+</div></div></section><section data-id="fe5136331c537fb63a3becffc92da663"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="0ac2be0ff3002d997cf2d841f4ab2b75"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Data Collection</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="70abcbccd8bc9c780d2f91c0f55cf7d9" style="height: auto; min-width: 30px; min-height: 30px; width: 1163px; left: 80px; top: 88px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left;">
+<p><span style="color:#FF8C00">Assumptions:</span></p>
+
+<p>- Implemented the case study app using metawear, android, and a PHP webservice</p>
+
+<p>- Captured data during each of the operational scenarios from the audit hooks and aggregated data into an audit log for the run.</p>
+
+<p>- Ran the scenarios in a real network environment at our University</p>
+
+<p>- Captured data for exactly 2 minutes</p>
+
+<p>- Ran captures 25 times for each scenario</p>
+
+<p>- Each run included the following steps: paired wearable, open android app, loaded advert, displayed temperature information graph</p>
+
+<p>- With the attack scenarios, a malicious advert was delivered</p>
+
+<p><span style="color:rgb(255, 255, 255)">- The malicious adverts exploited a known insecure development practice in android that allows code injection due to not properly sandboxing web-loaded content at run-time.</span></p>
+</div></div></section><section data-id="7fe3397f3bac5c34bca69b5e272d4578"><div class="sl-block" data-block-type="text" style="width: 1152px; left: 31px; top: 59px; height: auto;" data-block-id="6be428d58f49be31c2b1b399ff86257d"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 11;" data-placeholder-text="Text">
+<h1><span style="font-size:0.5em">75 Total Runs<br>
+Avg. 669 Events / Run<br>
+50,249 Total Events</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e2e290258c33df16e7b3dde7ef19894c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 11px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="color:#FF8C00">Some Stats</span></h2>
+</div></div></section><section data-id="d0a02078f29b583d93753a2fd1fc26dc"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 19px; height: auto;" data-block-id="1d27a7b747b73b863c71d8407b4efbbb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Data Cleaning and Preparation </h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 218px; height: auto;" data-block-id="2494b094a34193ee5ff495a29bddc7fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li>Removed malformed network events (only 2 in the  dataset)</li>
+	<li>Filtered out traffic from all devices except the collaborating devices in the app</li>
+	<li>Applied a mutual information feature selection from Peng and Long* to reduce dimensionality and complexity of data</li>
+	<li>Applied 80/20 stratified random sampling from the 75 runs</li>
+	<li>Prepared samples varying the training set size from 5 to 60 within our dataset to examine stability</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e7c36d10526a521f837da8395b96b542" style="height: auto; min-width: 30px; min-height: 30px; width: 790px; left: 117px; top: 648px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; line-height: 0.793;" data-has-line-height="">
+<p><span style="font-size:0.5em">* H. Peng, F. Long, and C. Ding, “Feature selection based on mutual information: Criteria of Max-Dependency, Max-Relevance, and Min-Redundancy,” <em>IEEE Trans. Pattern Anal. Mach. Intell.</em>, vol. 27, no. 8, pp. 1226–1238, 2005.</span></p>
+</div></div></section><section data-id="3ebf9efffcb5334f46cb817d34ed5dd4"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 201px; height: auto;" data-block-id="23fca6deec1743a5bf0ca14664811d14"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h1>Applied Several ML Classifiers</h1>
+
+<p>1) based on <span style="color:#FF8C00">eventType frequency</span> of a run sample</p>
+
+<p>2) based on <span style="color:#FF8C00">event frequency</span> of a run sample</p>
+</div></div></section><section data-id="34b86a3cb67a0579b13b7a7c32ada59f"><div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 11px;" data-block-id="97e57523b62ab4805ce0d1e2e249a185"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h3>Proof of Concept Analysis</h3></div></div>
+<div class="sl-block" data-block-type="table" data-block-id="b989b6fd212f800549e6b2adc95c90fe" style="height: auto; min-width: 200px; min-height: 30px; width: 1011px; left: 135px; top: 86px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content" data-table-rows="3" data-table-cols="5" style="z-index: 11;"><table><tbody>
+<tr>
+<th></th>
+<th>Logistic regression</th>
+<th>SVM</th>
+<th>Naïve Bayes</th>
+<th>K-NN
+</th>
+</tr>
+<tr>
+<td>Average precision</td>
+<td>81%</td>
+<td><strong>86%</strong></td>
+<td>59%</td>
+<td>72%
+</td>
+</tr>
+<tr>
+<td>Average Recall</td>
+<td>80%</td>
+<td><strong>85%</strong></td>
+<td>60%</td>
+<td>67%
+</td>
+</tr>
+</tbody></table></div></div></div>
+<div class="sl-block" data-block-type="table" data-block-id="053b0abaac9a658630e6ae229519852b" style="height: auto; min-width: 200px; min-height: 30px; width: 1094px; left: 93px; top: 425px;"><div class="sl-block-content" data-table-rows="3" data-table-cols="5" style="z-index: 12;"><table><tbody>
+<tr>
+<th></th>
+<th>Logistic regression</th>
+<th>SVM</th>
+<th>Naïve Bayes</th>
+<th>K-NN
+</th>
+</tr>
+<tr>
+<td>Average precision</td>
+<td>73%</td>
+<td><strong>88%</strong></td>
+<td>67%</td>
+<td>75%
+</td>
+</tr>
+<tr>
+<td>Average Recall</td>
+<td>73%</td>
+<td><strong>83%</strong></td>
+<td>67%</td>
+<td>68%
+</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 583px; left: 363px; top: 343px;" data-block-id="809d654df54edcbe17c646b72a6bf0d0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 153, 0); text-align: center;">
+<p><strong>Model Based on EventType Frequency</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 583px; left: 348px; top: 664px;" data-block-id="81fe0edf3ea79d1791c6947625427205"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 153, 0); text-align: center;">
+<p><strong>Model Based on Event Frequency</strong></p>
+</div></div></section><section data-id="66756bceaa77e498b69280e1e1023c02"><div class="sl-block" data-block-type="image" data-block-id="fa9eb3d31adf0d81f60ab7d4a44c7f1c" style="min-width: 4px; min-height: 4px; width: 863px; height: 551px; left: 209px; top: 86px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="862" data-natural-height="550" data-lazy-loaded="" data-src="hicss2019/291ff6422a3afd0b8cc2d58922e6eef4.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="91ea2bb561f1ad1f59e9b40747937df8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 648px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>SVM Stability</p>
+</div></div></section><section data-id="83297f39451d9998bc6ae51e75fbe300"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 273px; height: auto;" data-block-id="1972ba19ef707b604901b8e80f029467"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>-&gt; Yes, but...</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 128px;" data-block-id="65b685c38e6a44502ad8425efd89aeea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>Question 1: Can <span style="color:#FF8C00">we Detect these Attacks</span>?</h3>
+
+<h3> </h3>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="c6626c17ca72123ddccda627b6ee6f65" style="min-width: 4px; min-height: 4px; width: 343px; height: 300px; left: 641px; top: 383px;"><div class="sl-block-content" data-shape-type="octagon" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 343 300"><polygon points="343,150 292.8,256.1 171.5,300 50.2,256.1 0,150 50.2,43.9 171.5,0 292.8,43.9" class="shape-element" fill="rgb(255, 0, 0)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a7202f14f57403b967547b85de5e1ee8" style="height: auto; min-width: 30px; min-height: 30px; width: 296px; left: 665px; top: 432px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>WARNING!</p>
+
+<p> </p>
+
+<p>Beware of grandiose inductive extrapolation!</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 334px; left: 67px; top: 454px;" data-block-id="d024498e933f9f2b90af839cc2d971ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; font-size: 61%;" dir="ui"><h2><span style="color:#FFA500">Secured</span></h2></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 243px; height: 292px; left: 331px; top: 371px;" data-block-id="e03469766f7281ec483641fc2777829d"><div class="sl-block-content" style="z-index: 19;"><img style="" data-natural-width="440" data-natural-height="529" data-lazy-loaded="" data-src="hicss2019/1c43e803410e96cb7c1c9d9745fd2b74.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 258px; height: 169px; left: 331px; top: 432px;" data-block-id="6d9d61e58f14f94e58835e7b7249f735"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 20;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="9"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 259 169"><defs><clippath id="shape-mask-1-1547198494826"><rect width="259" height="169" rx="0" ry="0"></rect></clippath></defs><rect width="259" height="169" rx="0" ry="0" clip-path="url(#shape-mask-1-1547198494826)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="18"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 57px; height: 57px; left: 72px; top: 447px;" data-block-id="f433eb190261497b29aa19ff395ea81b"><div class="sl-block-content" data-shape-type="symbol-checkmark-circle" data-shape-fill-color="rgb(230, 145, 56)" data-shape-stretch="true" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(230, 145, 56)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM13.52 23.383l-7.362-7.363 2.828-2.828 4.533 4.535 9.617-9.617 2.828 2.828-12.444 12.445z"></path></g></svg></div></div></section><section data-id="f648dbf66f241f6401d576feb8dfeb30"><div class="sl-block" data-block-type="text" style="width: 1075px; left: 103px; top: 273px; height: auto;" data-block-id="323e7a1a1f8ac83dcebd8847c63bc377"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<p> </p>
+
+<h1>-&gt; Yes</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="76a9b8931c8635560df7fb7495498c35" style="height: auto; min-width: 30px; min-height: 30px; width: 1120px; left: 94px; top: 493px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:rgb(255, 255, 255)">Since each event has a code reference and/or an originating location, a developer can track down where the attack began to present in an application.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 1280px; left: 0px; top: 93px;" data-block-id="61534f166fa85e6463a1a087b67c8baf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>Question 2: Is our data <span style="color:#FF8C00">helpful for Mitigation Efforts</span>?</h3>
+
+<p> </p>
+</div></div></section><section data-id="d642e685b1369875fcf51d06fed8757b"><div class="sl-block" data-block-type="text" style="width: 1280px; left: 0px; top: 127px; height: auto;" data-block-id="e7bcc18c7fa1f7f0e3f8540f7dfbce1c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>USE/Fork/Replicate/Extend our Work</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1075px; left: 113px; top: 479px; height: auto;" data-block-id="2bb1ca081f99461b5f987e346da39a16"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h3><span style="color:#FF8C00">https://github.com/MLHale/secuwear-project</span></h3>
+</div></div></section></section><section data-id="c450ccd7e173e87065c2bc95d22d31cb"><div class="sl-block" data-block-type="text" style="width: 551px; left: 691px; top: 23px; height: auto;" data-block-id="4620e42faa61f46bcba6af70ae99d103"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2 style="text-align: right;"><span style="color:#FFA500">Questions?</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 627px; left: 0px; top: 656px; height: auto;" data-block-id="38d6bce7c7d5bdcb4f5f66754eb1ea62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; color: rgb(230, 145, 56); line-height: 0.78;" data-has-line-height="">
+<p>©2019 Matthew L. Hale or as listed</p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 613px; height: 574px; left: 627px; top: 120px;" data-block-id="b27c07b5ac48b9755c64cb102f061287"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="347" data-natural-height="325" data-lazy-loaded="" data-src="hicss2019/0d587e2647724e0e919407ad36057a65.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 120px; height: 109px; left: 23px; top: 23px;" data-block-id="4f5dab07945e36221926775e8116fe52"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="96" data-natural-height="87" data-lazy-loaded="" data-src="hicss2019/07138034456d883deee1425dfb431666.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 551px; left: 48px; top: 289px; height: auto;" data-block-id="303d7ff86d63f6bf0e7f9b3da5b50a3e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: left;">
+<h3 style="text-align:right"><strong><span style="color:#FFA500">Matt Hale, PHD</span></strong></h3>
+
+<p style="text-align:right"><span style="color:#FFA500">U</span>niversity of <span style="color:#FFA500">N</span>ebraska at <span style="color:#FFA500">O</span>maha</p>
+
+<p style="text-align:right">Assistant Professor, Cybersecurity</p>
+
+<p style="text-align:right">mlhale@unomaha.edu</p>
+
+<p style="text-align:right">twitter: <span style="color:#FFA500">@mlhale_</span></p>
+</div></div>
+</section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1407788,"slug":"hicss2019","title":"HICSS 2019","description":"HICSS Presentation 2019.","width":1280,"height":720,"visibility":"self","published_at":"2017-08-21T06:45:00.421Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/31977b99630b5f1d5c5737c0cadd185e/thumb.jpg?1547190111","view_count":0,"user":{"id":747632,"username":"matthale","name":"Matt Hale","description":null,"thumbnail_url":"https://lh6.googleusercontent.com/-KSSzYPPGAnk/AAAAAAAAAAI/AAAAAAAAAEI/P7Tqr95ZJSs/photo.jpg?sz=50","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":597999,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"none","transition":"slide","theme_id":null,"theme_font":"quicksand","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":68,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":3,"data_updated_at":1547198752060,"font_typekit":null,"font_google":null,"notes":{"e3b474a9a29a371c440fcb3260712e4a":"Convert to proper reveal.js slide at somepoint"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "none",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
